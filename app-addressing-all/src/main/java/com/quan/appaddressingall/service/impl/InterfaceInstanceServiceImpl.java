@@ -29,10 +29,9 @@ public class InterfaceInstanceServiceImpl implements InterfaceInstanceService {
     }
 
     @Override
-    public List<InterfaceInstance> selectInstanceByAppKey(String appKey) {
-        List<InterfaceInstance> interfaceInstances = interfaceInstanceDao.selectInstanceByAppKey(appKey);
-        InstanceHelper.sortByPriority(interfaceInstances);
-        return interfaceInstances;
+    public Map<String, List<String>> selectInstanceByAppId(List<String> appIds) {
+        List<InterfaceInstance> interfaceInstances = interfaceInstanceDao.selectInstanceByAppId(appIds);
+        return instanceListToMap(interfaceInstances);
     }
 
     @Override
@@ -57,7 +56,7 @@ public class InterfaceInstanceServiceImpl implements InterfaceInstanceService {
         for (String s : instanceMap.keySet()) {
             InstanceHelper.sortByPriority(instanceMap.get(s));
             List<String> addrPorts = instanceMap.get(s).stream().map(in -> in.getAddress() + COLON + in.getPort()).collect(Collectors.toList());
-            addrPortMap.put(s, addrPorts);
+            addrPortMap.put(s, addrPorts.stream().distinct().collect(Collectors.toList()));
         }
         return addrPortMap;
     }

@@ -8,7 +8,7 @@ import java.util.Map;
 public interface InterfaceInstanceService {
     Map<String, List<String>> selectAllInstance();
 
-    List<InterfaceInstance> selectInstanceByAppKey(String appKey);
+    Map<String, List<String>> selectInstanceByAppId(List<String> appIds);
 
     Boolean addInstance(List<InterfaceInstance> instances);
 }

@@ -1,7 +1,5 @@
 package com.quan.appaddressingall.controller;
 
-import com.quan.appaddressingall.common.InstanceHelper;
-import com.quan.appaddressingall.dao.InterfaceInstanceDao;
 import com.quan.appaddressingall.entity.InterfaceInstance;
 import com.quan.appaddressingall.service.InterfaceInstanceService;
 import org.slf4j.Logger;
@@ -24,10 +22,10 @@ public class InterfaceInstanceController {
     @Autowired
     InterfaceInstanceService interfaceInstanceService;
 
-    @RequestMapping("/getInstanceByKey")
-    public List<InterfaceInstance> getInstance(@RequestParam("appKey") String appKey) {
-        List<InterfaceInstance> interfaceInstances = interfaceInstanceService.selectInstanceByAppKey(appKey);
-        return interfaceInstances;
+    @RequestMapping("/getInstanceByAppId")
+    public Map<String, List<String>> getInstance(@RequestBody List<String> appId) {
+        Map<String, List<String>> addrPorts = interfaceInstanceService.selectInstanceByAppId(appId);
+        return addrPorts;
     }
 
     @RequestMapping("/getAllInstance")

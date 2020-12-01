@@ -32,3 +32,5 @@ create table app_id_meta
 create index index_app_id_key
     on app_id_meta (app_key);
 
+insert into interface_instance (interface_name, address, port, app_id, is_default, priority)
+values ('login','127.0.0.1',9001,'ci-better-login',0,2);
