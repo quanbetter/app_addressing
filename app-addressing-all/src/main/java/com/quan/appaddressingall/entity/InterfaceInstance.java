@@ -11,4 +11,5 @@ public class InterfaceInstance {
     private String appId;
     private boolean isDefault;
     private String keyName;
+    private Long priority;
 }

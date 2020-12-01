@@ -10,4 +10,13 @@
     <select id="selectInstanceByAppKey" resultType="com.quan.appaddressingall.entity.InterfaceInstance">
       select i.* ,concat(a.app_key,"&amp;",i.interface_name) as key_name from app_id_meta as a join interface_instance as  i on a.app_id = i.app_id where a.app_key =#{appKey};
     </select>
+
+    <insert id="addInstance" >
+        insert into interface_instance (interface_name, address, port, app_id, is_default, priority)
+        values
+        <foreach collection="list" item="instance" separator=",">
+            (#{instance.interfaceName},#{instance.address},#{instance.port},#{instance.appId},#{instance.isDefault},#{instance.priority})
+        </foreach>
+
+    </insert>
 </mapper>
