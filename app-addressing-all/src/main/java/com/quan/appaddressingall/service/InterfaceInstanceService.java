@@ -10,5 +10,5 @@ public interface InterfaceInstanceService {
 
     Map<String, List<String>> selectInstanceByAppId(List<String> appIds);
 
-    Boolean addInstance(List<InterfaceInstance> instances);
+    Integer addInstance(List<InterfaceInstance> instances);
 }

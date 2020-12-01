@@ -7,8 +7,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class RestTemplateAutoConfig {
     @Bean
-    public RestTemplate initRestTemplate(){
+    public RestTemplate initRestTemplate() {
         return new RestTemplate();
     }
-
 }

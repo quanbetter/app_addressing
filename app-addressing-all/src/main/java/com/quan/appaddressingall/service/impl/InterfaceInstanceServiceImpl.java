@@ -35,9 +35,12 @@ public class InterfaceInstanceServiceImpl implements InterfaceInstanceService {
     }
 
     @Override
-    public Boolean addInstance(List<InterfaceInstance> instances) {
-        interfaceInstanceDao.addInstance(instances);
-        return true;
+    public String addInstance(List<InterfaceInstance> instances) {
+        Integer count = interfaceInstanceDao.addInstance(instances);
+        if (count != instances.size()){
+            return "some instance didn't add successful";
+        }
+        return "add all successful";
     }
 
     private Map<String, List<String>> instanceListToMap(List<InterfaceInstance> instances) {

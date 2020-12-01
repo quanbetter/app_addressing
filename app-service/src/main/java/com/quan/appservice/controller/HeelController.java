@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestClientResponseException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -27,15 +28,20 @@ public class HeelController {
 
     @RequestMapping("/login")
     public Boolean Forword(@RequestParam("inf_name") String interfaceName, @RequestParam("app_key") String appKey, @RequestBody LaborerDTO laborerDTO) {
-        logger.info("login{}",laborerDTO.toString());
+        logger.info("login{}", laborerDTO.toString());
         String keyName = appKey + SPLIT_KEY_NAME + interfaceName;
         List<String> addressList = interfaceInstance.get(keyName);
         Boolean result = false;
         if (addressList != null) {
-            try {
-                result = restTemplate.postForObject(HTTP_START + addressList.get(0) + SLASH + interfaceName, laborerDTO, Boolean.class);
-            }catch (Exception e){
-                e.printStackTrace();
+            for (String addrPost : addressList) {
+                try {
+                    result = restTemplate.postForObject(HTTP_START + addrPost + SLASH + interfaceName, laborerDTO, Boolean.class);
+                    break;
+                } catch (RestClientResponseException e) {
+                    if (500 <= e.getRawStatusCode()) {
+                        continue;
+                    }
+                }
             }
         }
         return result;

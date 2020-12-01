@@ -19,7 +19,9 @@ import java.util.Map;
 import static com.quan.appservice.common.AddressingHelper.ADDRESSING_ALL_URL;
 import static com.quan.appservice.common.AddressingHelper.ADDRESSING_APP_ID_URL;
 
-
+/**
+ * Listen applicationReadyEvent and get all instance by appId
+ */
 @Data
 @Component
 @ConfigurationProperties(prefix = "unify")

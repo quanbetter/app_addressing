@@ -11,5 +11,5 @@ public interface InterfaceInstanceDao {
 
     List<InterfaceInstance> selectInstanceByAppId(List<String> appIds);
 
-    Boolean addInstance(List<InterfaceInstance> instances);
+    Integer addInstance(List<InterfaceInstance> instances);
 }
