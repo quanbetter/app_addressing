@@ -13,10 +13,10 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-import static com.quan.appservice.common.AddressingHelper.HTTP_START;
+import static com.quan.appservice.common.AddressingHelper.HTTP_HEAD;
 import static com.quan.appservice.common.AddressingHelper.SLASH;
 import static com.quan.appservice.common.AddressingHelper.SPLIT_KEY_NAME;
-import static com.quan.appservice.common.AddressingHelper.interfaceInstance;
+import static com.quan.appservice.common.AddressingHelper.interfaceInstanceCache;
 
 @RestController
 @RequestMapping("/unify")
@@ -30,12 +30,12 @@ public class HeelController {
     public Boolean Forword(@RequestParam("inf_name") String interfaceName, @RequestParam("app_key") String appKey, @RequestBody LaborerDTO laborerDTO) {
         logger.info("login{}", laborerDTO.toString());
         String keyName = appKey + SPLIT_KEY_NAME + interfaceName;
-        List<String> addressList = interfaceInstance.get(keyName);
+        List<String> addressList = interfaceInstanceCache.get(keyName);
         Boolean result = false;
         if (addressList != null) {
             for (String addrPost : addressList) {
                 try {
-                    result = restTemplate.postForObject(HTTP_START + addrPost + SLASH + interfaceName, laborerDTO, Boolean.class);
+                    result = restTemplate.postForObject(HTTP_HEAD + addrPost + SLASH + interfaceName, laborerDTO, Boolean.class);
                     break;
                 } catch (RestClientResponseException e) {
                     if (500 <= e.getRawStatusCode()) {

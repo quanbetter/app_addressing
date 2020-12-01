@@ -12,6 +12,7 @@ public class AddressingHelper {
     public static final String COLON = ":";
     public static final String SLASH = "/";
     public static final String SPLIT_KEY_NAME = "&";
-    public static final String HTTP_START = "http://";
-    public static Map<String, List<String>> interfaceInstance;
+    public static final String HTTP_HEAD = "http://";
+    public static final String HTTPS_HEAD = "http://";
+    public static Map<String, List<String>> interfaceInstanceCache;
 }

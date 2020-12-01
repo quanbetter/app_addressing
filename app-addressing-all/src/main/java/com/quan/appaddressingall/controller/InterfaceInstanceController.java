@@ -35,7 +35,7 @@ public class InterfaceInstanceController {
     }
 
     @RequestMapping("/addInstance")
-    public Integer addInstance(@RequestBody List<InterfaceInstance> instances){
+    public String addInstance(@RequestBody List<InterfaceInstance> instances){
         return interfaceInstanceService.addInstance(instances);
     }
 

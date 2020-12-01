@@ -45,7 +45,7 @@ public class GetInterfaceInstanceAutoConfig implements ApplicationListener<Appli
     private void getAll(){
         try{
             Map<String, List<String>> resultMap = restTemplate.postForObject(ADDRESSING_ALL_URL, null, HashMap.class);
-            AddressingHelper.interfaceInstance = resultMap;
+            AddressingHelper.interfaceInstanceCache = resultMap;
             logger.info("All interface instance had ready ....");
         }catch (RestClientException e){
             logger.warn("Can not get all interface instance");
@@ -55,7 +55,7 @@ public class GetInterfaceInstanceAutoConfig implements ApplicationListener<Appli
     private void getByAppId(List<String> appId){
         try{
             Map<String, List<String>> resultMap = restTemplate.postForObject(ADDRESSING_APP_ID_URL, appId, HashMap.class);
-            AddressingHelper.interfaceInstance = resultMap;
+            AddressingHelper.interfaceInstanceCache = resultMap;
             logger.info("{} all interface instance had ready ....",appId.toString());
         }catch (RestClientException e){
             logger.warn("{} Can not get all interface instance",appId.toString());
