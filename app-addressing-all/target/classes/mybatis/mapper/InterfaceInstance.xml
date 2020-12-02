@@ -16,7 +16,6 @@
         <foreach collection="list" item="appId" separator="or">
             i.app_id = #{appId}
         </foreach>
-
     </select>
 
     <insert id="addInstance">
