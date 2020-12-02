@@ -3,7 +3,7 @@ package com.quan.appaddressingall.entity;
 import lombok.Data;
 
 @Data
-public class InterfaceInstance {
+public class APIInstance {
     private String appId;
     private String interfaceName;
     private String keyNameVersion;

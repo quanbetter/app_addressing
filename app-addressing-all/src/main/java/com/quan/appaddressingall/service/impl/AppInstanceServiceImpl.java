@@ -1,7 +1,7 @@
 package com.quan.appaddressingall.service.impl;
 
 import com.quan.appaddressingall.dao.AppInstanceDao;
-import com.quan.appaddressingall.entity.INFInstanceResult;
+import com.quan.appaddressingall.entity.APIInstanceResult;
 import com.quan.appaddressingall.service.AppInstanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,7 +13,7 @@ public class AppInstanceServiceImpl implements AppInstanceService {
     AppInstanceDao appInstanceDao;
 
     @Override
-    public List<INFInstanceResult> getDefaultAppInstance() {
+    public List<APIInstanceResult> getDefaultAppInstance() {
        return appInstanceDao.getDefaultAppInstance();
     }
 }

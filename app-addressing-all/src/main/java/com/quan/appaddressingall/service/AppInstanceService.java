@@ -1,9 +1,9 @@
 package com.quan.appaddressingall.service;
 
-import com.quan.appaddressingall.entity.INFInstanceResult;
+import com.quan.appaddressingall.entity.APIInstanceResult;
 
 import java.util.List;
 
 public interface AppInstanceService {
-    List<INFInstanceResult> getDefaultAppInstance();
+    List<APIInstanceResult> getDefaultAppInstance();
 }

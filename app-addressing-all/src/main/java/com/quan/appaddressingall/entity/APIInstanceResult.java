@@ -3,7 +3,7 @@ package com.quan.appaddressingall.entity;
 import lombok.Data;
 
 @Data
-public class INFInstanceResult {
+public class APIInstanceResult {
     private String keyNameVersion = "default";
     private String path = "/";
     private String address;
