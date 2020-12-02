@@ -10,7 +10,8 @@
     </select>
 
     <select id="selectInstanceByAppId" resultType="com.quan.appaddressingall.entity.InterfaceInstance">
-        select i.* ,concat(a.app_key,"&amp;",i.interface_name) as key_name from app_id_meta as a join interface_instance
+        select i.* ,a.app_secret,concat(a.app_key,"&amp;",i.interface_name,"&amp;",i.version) as key_name_version from
+        app_id_meta as a join interface_instance
         as i on a.app_id = i.app_id where
         <foreach collection="list" item="appId" separator="or">
             i.app_id = #{appId}
@@ -19,7 +20,7 @@
     </select>
 
     <insert id="addInstance">
-        insert into interface_instance (interface_name, address, port, app_id, is_default, priority)
+        insert into interface_instance (interface_name, address, port, app_id, priority)
         values
         <foreach collection="list" item="instance" separator=",">
             (#{instance.interfaceName},#{instance.address},#{instance.port},#{instance.appId},#{instance.isDefault},#{instance.priority})

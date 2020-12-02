@@ -25,6 +25,7 @@ create table app_id_meta
     app_id     varchar(255)                       not null comment '提供接口的服务id',
     app_key    bigint                             not null comment 'app_id对应的唯一app_key,用于外部可见',
     app_msg    varchar(255)                       not null comment 'app信息简述',
+    app_secret varchar(255)                       not null comment '访问sign',
     updated_at datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
     created_at datetime default CURRENT_TIMESTAMP not null comment '创建时间'
 )

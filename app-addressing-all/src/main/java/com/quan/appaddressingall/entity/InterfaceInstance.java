@@ -4,12 +4,13 @@ import lombok.Data;
 
 @Data
 public class InterfaceInstance {
-    private Long id;
-    private String interfaceName;
-    private String address;
-    private Integer port;
     private String appId;
-    private boolean isDefault;
-    private String keyName;
+    private String interfaceName;
+    private String keyNameVersion;
+    private String path;
+    private String version;
+    private String address;
+    private Long port;
     private Long priority;
+    private String appSecret;
 }

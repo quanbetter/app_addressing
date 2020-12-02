@@ -1,5 +1,6 @@
 package com.quan.appaddressingall.controller;
 
+import com.quan.appaddressingall.entity.INFInstanceResult;
 import com.quan.appaddressingall.entity.InterfaceInstance;
 import com.quan.appaddressingall.service.InterfaceInstanceService;
 import org.slf4j.Logger;
@@ -22,14 +23,14 @@ public class InterfaceInstanceController {
     InterfaceInstanceService interfaceInstanceService;
 
     @RequestMapping("/getInstanceByAppId")
-    public Map<String, List<String>> getInstance(@RequestBody List<String> appId) {
-        Map<String, List<String>> addrPorts = interfaceInstanceService.selectInstanceByAppId(appId);
-        return addrPorts;
+    public Map<String, List<INFInstanceResult>> getInstance(@RequestBody List<String> appId) {
+        Map<String, List<INFInstanceResult>> instances = interfaceInstanceService.selectInstanceByAppId(appId);
+        return instances;
     }
 
     @RequestMapping("/getAllInstance")
     public Map<String, List<String>> getAllInstance() {
-        Map<String, List<String>> addrPorts = interfaceInstanceService.selectAllInstance();;
+        Map<String, List<String>> addrPorts = interfaceInstanceService.selectAllInstance();
         logger.info("getAllInstance---count:{}", addrPorts.size());
         return addrPorts;
     }
