@@ -51,7 +51,6 @@ public class InterfaceInstanceServiceImpl implements InterfaceInstanceService {
     }
 
     private Map<String, List<INFInstanceResult>> instanceListToMap(List<InterfaceInstance> instances) {
-        Map<String, List<INFInstanceResult>> results = new HashMap<>();
         Map<String, List<InterfaceInstance>> instanceMap = new HashMap<>();
         for (InterfaceInstance instance : instances) {
             if (instanceMap.containsKey(instance.getKeyNameVersion())) {
@@ -63,17 +62,23 @@ public class InterfaceInstanceServiceImpl implements InterfaceInstanceService {
             instanceMap.put(instance.getKeyNameVersion(), interfaceInstances);
         }
 
+        return  instanceToInstanceResult(instanceMap);
+    }
+
+    private Map<String, List<INFInstanceResult>> instanceToInstanceResult( Map<String, List<InterfaceInstance>> instanceMap ){
+        Map<String, List<INFInstanceResult>> instanceResult  = new HashMap<>();
         //sort by priority and only return address and port
         for (String key : instanceMap.keySet()) {
             InstanceHelper.sortByPriority(instanceMap.get(key));//排完序后进行组装
             List<InterfaceInstance> instanceList = instanceMap.get(key);
-            List<INFInstanceResult> re =  instanceList.stream().map(s->
+
+            List<INFInstanceResult> results =  instanceList.stream().map(s->
             {INFInstanceResult infInstanceResult = new INFInstanceResult();
-            BeanUtils.copyProperties(s,infInstanceResult);
-            return infInstanceResult;
+                BeanUtils.copyProperties(s,infInstanceResult);
+                return infInstanceResult;
             }).collect(Collectors.toList());
-            results.put(key,re);
+            instanceResult.put(key,results);
         }
-        return results;
+        return instanceResult;
     }
 }
