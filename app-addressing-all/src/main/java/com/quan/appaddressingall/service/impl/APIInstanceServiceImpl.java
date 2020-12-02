@@ -28,7 +28,7 @@ public class APIInstanceServiceImpl implements APIInstanceService {
     @Override
     public Map<String, List<String>> selectAllInstance() {
         List<APIInstance> APIInstances = APIInstanceDao.selectAllInstance();
-//        Map<String, List<String>> addrPorts = instanceListToMap(APIInstances);
+        //TODO
         return null;
     }
 
@@ -77,7 +77,7 @@ public class APIInstanceServiceImpl implements APIInstanceService {
                 APIInstanceResult apiInstanceResult = new APIInstanceResult();
                 BeanUtils.copyProperties(s, apiInstanceResult);
                 return apiInstanceResult;
-            }).collect(Collectors.toList());
+            }).distinct().collect(Collectors.toList());//流式去重distinct
 
             apiInstanceResults.put(key,results);
         }
