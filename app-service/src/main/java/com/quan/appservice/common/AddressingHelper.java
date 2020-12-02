@@ -14,5 +14,5 @@ public class AddressingHelper {
     public static final String SPLIT_KEY_NAME = "&";
     public static final String HTTP_HEAD = "http://";
     public static final String HTTPS_HEAD = "http://";
-    public static Map<String, List<String>> interfaceInstanceCache;
+    public static Map<String, List<INFInstanceResult>> interfaceInstanceCache;
 }

@@ -34,6 +34,10 @@ create table app_id_meta
 create index index_app_id_key
     on app_id_meta (app_key);
 
+-- 建立外键：
+alter table interface_instance
+	add constraint interface_instance___fk
+		foreign key (app_id) references app_id_meta (app_id);
 
 -- 插入数据例子
 insert into interface_instance (interface_name, address, port, app_id, is_default, priority)
@@ -44,8 +48,11 @@ values ('login','127.0.0.1',9001,'ci-better-login',0,2);
  select i.*, concat(a.app_key, "&amp;", i.interface_name) as key_name from app_id_meta as a
 join interface_instance as i on a.app_id = i.app_id;
 
-
+select ai.*,am.app_secret from app_instance as ai join app_id_meta as am on am.app_id = ai.app_id  where ai.is_default;
 -- 删除数据
 delete from interface_instance where app_id = 'ci-better-login' and interface_name = 'login' and address ='127.0.0.1';
 
 -- 更新数据
+
+-- 主键和外键的字符编码需要一致，引用类型需要一致，被引用的列需要建立索引
+-- 外键用于表与表之间的约束
