@@ -16,10 +16,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>app-service</module>
-        <module>app-addressing-all</module>
-        <module>login-service</module>
-        <module>login-service2</module>
+        <module>addressing-domain</module>
+        <module>addressing-service</module>
+        <module>addressing-web</module>
     </modules>
 
 </project>

@@ -1,0 +1,4 @@
+com/quan/addressing/service/AppInstanceService.class
+com/quan/addressing/service/impl/AppInstanceServiceImpl.class
+com/quan/addressing/service/impl/APIInstanceServiceImpl.class
+com/quan/addressing/service/APIInstanceService.class

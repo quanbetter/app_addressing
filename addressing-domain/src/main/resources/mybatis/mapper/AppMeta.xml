@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quan.addressing.dao.AppMetaDao">
+    <insert id="insertAppMeta">
+        insert into app_meta(app_name, app_desc, app_secret) values
+        <foreach collection="list" item="appMeta" separator=",">
+            (#{appMeta.appName},#{appMeta.appDesc},#{appMeta.appSecret})
+        </foreach>
+    </insert>
+
+    <delete id="deleteAppMeta">
+        delete from app_meta where
+        <foreach collection="list" separator="or" item="appName">
+            app_name = #{appName}
+        </foreach>
+    </delete>
+
+    <update id="updateAppMeta">
+        update app_meta
+        set app_desc   = #{appMetaEntity.appDesc},
+            app_secret = #{appMetaEntity.appSecret}
+            where app_name = #{appMetaEntity.appName}
+    </update>
+
+    <select id="selectAppMeta" resultType="com.quan.addressing.entity.AppMetaEntity">
+        select * from app_meta where
+        <foreach collection="list" separator="or" item="appName">
+            app_name = #{appName}
+        </foreach>
+    </select>
+
+</mapper>

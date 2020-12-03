@@ -766,11 +766,11 @@
     <user id="240" parent="1" name="root">
       <Host>%</Host>
     </user>
-    <table id="241" parent="6" name="app_id_meta">
-      <Comment>appId和appKey对应关系表</Comment>
+    <table id="241" parent="6" name="app_instance">
+      <Comment>app实例表</Comment>
     </table>
-    <table id="242" parent="6" name="app_instance">
-      <Comment>appId和appKey对应关系表</Comment>
+    <table id="242" parent="6" name="app_meta">
+      <Comment>app元数据表</Comment>
     </table>
     <table id="243" parent="6" name="interface_instance">
       <Comment>接口实例表</Comment>
@@ -786,33 +786,27 @@
     <column id="245" parent="241" name="app_id">
       <Position>2</Position>
       <Comment>提供接口的服务id</Comment>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="246" parent="241" name="app_key">
-      <Position>3</Position>
-      <Comment>app_id对应的唯一app_key,用于外部可见</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="241" name="app_msg">
+    <column id="246" parent="241" name="address">
+      <Position>3</Position>
+      <Comment>app的地址</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="241" name="port">
       <Position>4</Position>
-      <Comment>app信息简述</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <Comment>app的port</Comment>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>80</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="241" name="app_secret">
+    <column id="248" parent="241" name="updated_at">
       <Position>5</Position>
-      <Comment>签名</Comment>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="249" parent="241" name="updated_at">
-      <Position>6</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
@@ -820,23 +814,28 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="250" parent="241" name="created_at">
-      <Position>7</Position>
+    <column id="249" parent="241" name="created_at">
+      <Position>6</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="251" parent="241" name="index_app_id_key">
-      <ColNames>app_key</ColNames>
+    <index id="250" parent="241" name="index_app_id">
+      <ColNames>app_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="252" parent="241" name="PRIMARY">
+    <key id="251" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="252" parent="241" name="fk_app_instance_app_meta">
+      <ColNames>app_id</ColNames>
+      <RefTableName>app_meta</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
     <column id="253" parent="242" name="id">
       <Position>1</Position>
       <Comment>id</Comment>
@@ -845,38 +844,29 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="242" name="app_id">
+    <column id="254" parent="242" name="app_name">
       <Position>2</Position>
       <Comment>提供接口的服务id</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="242" name="address">
+    <column id="255" parent="242" name="app_desc">
       <Position>3</Position>
-      <Comment>app的地址</Comment>
+      <Comment>app信息简述</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="242" name="port">
+    <column id="256" parent="242" name="app_secret">
       <Position>4</Position>
-      <Comment>app的port</Comment>
-      <DataType>int(11)|0s</DataType>
+      <Comment>签名</Comment>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>80</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="242" name="is_default">
+    <column id="257" parent="242" name="updated_at">
       <Position>5</Position>
-      <Comment>是否是默认</Comment>
-      <DataType>bit(1)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>b&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="242" name="updated_at">
-      <Position>6</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
@@ -884,22 +874,27 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="259" parent="242" name="created_at">
-      <Position>7</Position>
+    <column id="258" parent="242" name="created_at">
+      <Position>6</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="260" parent="242" name="index_app_id">
-      <ColNames>app_id</ColNames>
+    <index id="259" parent="242" name="appId__index">
+      <ColNames>app_name</ColNames>
+      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="261" parent="242" name="PRIMARY">
+    <key id="260" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="261" parent="242" name="appId__index">
+      <ColNames>app_name</ColNames>
+      <UnderlyingIndexName>appId__index</UnderlyingIndexName>
     </key>
     <column id="262" parent="243" name="id">
       <Position>1</Position>
@@ -909,59 +904,37 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="243" name="interface_name">
+    <column id="263" parent="243" name="app_id">
       <Position>2</Position>
+      <Comment>提供接口的服务名</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="243" name="interface_name">
+      <Position>3</Position>
       <Comment>接口名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="243" name="address">
-      <Position>3</Position>
-      <Comment>接口所在实例的ip</Comment>
-      <DataType>varchar(128)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="265" parent="243" name="port">
+    <column id="265" parent="243" name="path">
       <Position>4</Position>
-      <Comment>实例端口</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="266" parent="243" name="app_id">
-      <Position>5</Position>
-      <Comment>提供接口的服务id</Comment>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="267" parent="243" name="path">
-      <Position>6</Position>
       <Comment>接口对应的路径</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="243" name="version">
-      <Position>7</Position>
-      <Comment>版本</Comment>
-      <DataType>double|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>1</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="269" parent="243" name="priority">
-      <Position>8</Position>
+    <column id="266" parent="243" name="priority">
+      <Position>5</Position>
       <Comment>优先级</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>9999</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="243" name="updated_at">
-      <Position>9</Position>
+    <column id="267" parent="243" name="updated_at">
+      <Position>6</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
@@ -969,23 +942,27 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="271" parent="243" name="created_at">
-      <Position>10</Position>
+    <column id="268" parent="243" name="created_at">
+      <Position>7</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="272" parent="243" name="index_app_id_interface_name">
-      <ColNames>interface_name
-app_id</ColNames>
+    <index id="269" parent="243" name="appId__index">
+      <ColNames>app_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="273" parent="243" name="PRIMARY">
+    <key id="270" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="271" parent="243" name="fk_interface_instance_app_meta">
+      <ColNames>app_id</ColNames>
+      <RefTableName>app_meta</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

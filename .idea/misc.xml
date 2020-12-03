@@ -5,10 +5,10 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/app-service/pom.xml" />
-        <option value="$PROJECT_DIR$/app-addressing-all/pom.xml" />
-        <option value="$PROJECT_DIR$/login-service/pom.xml" />
-        <option value="$PROJECT_DIR$/login-service2/pom.xml" />
+        <option value="$PROJECT_DIR$/addressing-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/addressing-service/pom.xml" />
+        <option value="$PROJECT_DIR$/addressing-web/pom.xml" />
+        <option value="$PROJECT_DIR$/addressing-common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quan.addressing.dao.ApiInstanceDao">
+    <select id="selectAllInstance" resultType="com.quan.addressing.entity.ApiInstance">
+        #         select i.*, concat(a.app_key, '&amp;', i.interface_name) as key_name
+#         from app_id_meta as a
+#                  join interface_instance as i on a.app_id = i.app_id;
+    </select>
+
+    <select id="selectInstanceByAppId" resultType="com.quan.addressing.entity.ApiInstance">
+        select am.app_name, concat(am.app_name, '&amp;', ii.interface_name) as key_name,am.app_secret,
+        ii.interface_name, ii.path, ii.priority, ai.address,ai.port
+        from app_meta as am
+        join app_instance ai on am.id = ai.app_id
+        join interface_instance ii on am.id = ii.app_id where
+        <foreach collection="list" item="appName" separator="or">
+            am.app_name = #{appName}
+        </foreach>
+    </select>
+
+    <insert id="insertInstance">
+        insert into interface_instance (app_id,interface_name ,path,priority)
+        values
+        <foreach collection="list" item="instance" separator=",">
+            (#{instance.appId}#{instance.interfaceName},#{instance.path},#{instance.priority}})
+        </foreach>
+    </insert>
+</mapper>

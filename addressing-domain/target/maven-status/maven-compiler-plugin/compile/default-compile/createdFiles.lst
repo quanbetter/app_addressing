@@ -1,0 +1,8 @@
+com/quan/addressing/dao/AppInstanceDao.class
+com/quan/addressing/common/InstanceHelper$1.class
+com/quan/addressing/entity/AppIdMeta.class
+com/quan/addressing/dao/APIInstanceDao.class
+com/quan/addressing/common/InstanceHelper.class
+com/quan/addressing/entity/APIInstance.class
+com/quan/addressing/common/Constant.class
+com/quan/addressing/entity/APIInstanceResult.class
