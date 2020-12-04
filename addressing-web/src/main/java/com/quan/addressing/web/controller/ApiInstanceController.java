@@ -1,8 +1,5 @@
 package com.quan.addressing.web.controller;
 
-
-import com.quan.addressing.common.Constant;
-import com.quan.addressing.entity.ApiInstance;
 import com.quan.addressing.model.ApiInstanceModel;
 import com.quan.addressing.model.ApiInstanceResult;
 import com.quan.addressing.service.ApiInstanceService;
@@ -12,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -30,9 +28,9 @@ public class ApiInstanceController {
     @Autowired
     AppInstanceService appInstanceService;
 
-    @RequestMapping("/getInstanceByAppId")
-    public Map<String, List<ApiInstanceResult>> getInstance(@RequestBody List<String> appId) {
-            Map<String, List<ApiInstanceResult>> instances = apiInstanceService.selectInstanceByAppId(appId);
+    @RequestMapping("/getInstanceByAppName")
+    public Map<String, List<ApiInstanceResult>> getInstance(@RequestBody List<String> appNames) {
+            Map<String, List<ApiInstanceResult>> instances = apiInstanceService.selectInstanceByAppName(appNames);
             logger.info("already get API instance {}",instances.size());
             return instances;
     }
@@ -42,4 +40,13 @@ public class ApiInstanceController {
         return apiInstanceService.insertInstance(apiInstanceModels);
     }
 
+    @RequestMapping("/delete")
+    public String update(@RequestParam("appId") Long appId,@RequestParam("apiName") String apiName){
+        return apiInstanceService.deleteInstance(appId,apiName);
+    }
+
+    @RequestMapping("/update")
+    public String update(@RequestBody ApiInstanceModel apiInstanceModel){
+        return apiInstanceService.updateInstance(apiInstanceModel);
+    }
 }

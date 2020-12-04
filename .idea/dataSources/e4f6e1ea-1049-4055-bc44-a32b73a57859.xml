@@ -822,7 +822,7 @@
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="250" parent="241" name="index_app_id">
+    <index id="250" parent="241" name="fk_app_instance_app_meta">
       <ColNames>app_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -887,16 +887,20 @@
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="260" parent="242" name="PRIMARY">
+    <index id="260" parent="242" name="index_app_id">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="261" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="261" parent="242" name="appId__index">
+    <key id="262" parent="242" name="appId__index">
       <ColNames>app_name</ColNames>
       <UnderlyingIndexName>appId__index</UnderlyingIndexName>
     </key>
-    <column id="262" parent="243" name="id">
+    <column id="263" parent="243" name="id">
       <Position>1</Position>
       <Comment>id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -904,28 +908,28 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="243" name="app_id">
+    <column id="264" parent="243" name="app_id">
       <Position>2</Position>
       <Comment>提供接口的服务名</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="243" name="interface_name">
+    <column id="265" parent="243" name="interface_name">
       <Position>3</Position>
       <Comment>接口名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="243" name="path">
+    <column id="266" parent="243" name="path">
       <Position>4</Position>
       <Comment>接口对应的路径</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="243" name="priority">
+    <column id="267" parent="243" name="priority">
       <Position>5</Position>
       <Comment>优先级</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -933,7 +937,7 @@
       <DefaultExpression>9999</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="243" name="updated_at">
+    <column id="268" parent="243" name="updated_at">
       <Position>6</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -942,7 +946,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="268" parent="243" name="created_at">
+    <column id="269" parent="243" name="created_at">
       <Position>7</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -950,16 +954,27 @@
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="269" parent="243" name="appId__index">
+    <index id="270" parent="243" name="interface_instance_id_uindex">
+      <ColNames>app_id
+interface_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="271" parent="243" name="appId__index">
       <ColNames>app_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="270" parent="243" name="PRIMARY">
+    <key id="272" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="271" parent="243" name="fk_interface_instance_app_meta">
+    <key id="273" parent="243" name="interface_instance_id_uindex">
+      <ColNames>app_id
+interface_name</ColNames>
+      <UnderlyingIndexName>interface_instance_id_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="274" parent="243" name="fk_interface_instance_app_meta">
       <ColNames>app_id</ColNames>
       <RefTableName>app_meta</RefTableName>
       <RefColNames>id</RefColNames>

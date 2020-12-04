@@ -13,6 +13,9 @@ create table app_meta
 )
     comment 'app元数据表';
 
+create index index_app_id
+    on app_meta (id);
+
 
 
 --  app-instance app对应的实例表
@@ -29,9 +32,6 @@ create table app_instance
         foreign key (app_id) references app_meta (id)
 )
     comment 'app实例表';
-
-create index index_app_id
-    on app_instance (app_id);
 
 
 -- 接口信息表

@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class ApiInstance {
-    private String appName;
+    private String appId;
     private String appSecret;
     private String interfaceName;
     private String path;

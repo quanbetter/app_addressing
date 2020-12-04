@@ -22,13 +22,19 @@ public class AppMetaController {
     }
 
     @RequestMapping("/delete")
-    public String deleteAppMeta(@RequestBody List<String>  appNames){
-        return appMetaService.deleteAppMeta(appNames);
+    public String deleteAppMeta(@RequestBody List<String>  appIds){
+        return appMetaService.deleteAppMeta(appIds);
     }
 
     @RequestMapping("/findByName")
     public List<AppMetaModel> findByName(@RequestBody List<String>  appNames){
         return appMetaService.selectAppMeta(appNames);
     }
+
+    @RequestMapping("/update")
+    public String updateAppMeta(@RequestBody AppMetaModel appMetaModel){
+        return appMetaService.updateAppMeta(appMetaModel);
+    }
+
 
 }

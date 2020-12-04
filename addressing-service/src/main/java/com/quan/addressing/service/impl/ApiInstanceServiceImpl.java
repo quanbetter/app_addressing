@@ -7,11 +7,12 @@ import com.quan.addressing.entity.ApiInstanceEntiry;
 import com.quan.addressing.model.ApiInstanceModel;
 import com.quan.addressing.util.InstanceHelper;
 import com.quan.addressing.dao.ApiInstanceDao;
-import com.quan.addressing.dao.AppInstanceDao;
 import com.quan.addressing.model.ApiInstanceResult;
 import com.quan.addressing.service.ApiInstanceService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,8 +32,8 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
     ApiInstanceDao apiInstanceDao;
 
     @Override
-    public Map<String, List<ApiInstanceResult>> selectInstanceByAppId(List<String> appIds) {
-        List<ApiInstance> ApiInstances = apiInstanceDao.selectInstanceByAppId(appIds);
+    public Map<String, List<ApiInstanceResult>> selectInstanceByAppName(List<String> appNames) {
+        List<ApiInstance> ApiInstances = apiInstanceDao.selectInstanceByAppName(appNames);
         Map<String, List<ApiInstanceResult>> resultMap = toMap(ApiInstances);
         return resultMap;
     }
@@ -40,21 +41,38 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
     @Override
     @Transactional
     public String insertInstance(List<ApiInstanceModel> apiInstanceModels) {
+        String result = "";
         List<ApiInstanceEntiry> instanceEntiries = apiInstanceModels.stream().map(apiInstanceModel -> {
             ApiInstanceEntiry apiInstanceEntiry = new ApiInstanceEntiry();
             BeanUtils.copyProperties(apiInstanceModel, apiInstanceEntiry);
             return apiInstanceEntiry;
         }).collect(Collectors.toList());
-
-        if (haveAppMeta(apiInstanceModels)){
-
-            Integer count = apiInstanceDao.insertInstance(instanceEntiries);
-            if (count != instanceEntiries.size()) {
-                return "ALL instance didn't add successful";
+        try {
+            apiInstanceDao.insertInstance(instanceEntiries);
+            result = "ALL instance add successful";
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (e.getClass() == DataIntegrityViolationException.class) {
+                result = "please confirm you appId had exist in app_Meta_table";
+            } else if (e.getClass() == DuplicateKeyException.class) {
+                result = "Some appId's interface is already exist,please use update";
             }
-            return "fail";
         }
-        return "add all successful";
+        return result;
+    }
+
+    @Override
+    public String deleteInstance(Long appId, String apiName) {
+        Integer count = apiInstanceDao.deleteInstance(appId, apiName);
+        return "had delete " + count + "data";
+    }
+
+    @Override
+    public String updateInstance(ApiInstanceModel apiInstanceModel) {
+        ApiInstanceEntiry apiInstanceEntiry = new ApiInstanceEntiry();
+        BeanUtils.copyProperties(apiInstanceModel,apiInstanceEntiry);
+        Integer count = apiInstanceDao.updateInstance(apiInstanceEntiry);
+        return "had update " + count + "data";
     }
 
 
@@ -93,10 +111,12 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
         return apiInstanceResults;
     }
 
-    private Boolean haveAppMeta(List<ApiInstanceModel> apiInstanceModels) {
-        List<String> appNames = apiInstanceModels.stream()
-                .map(apiInstanceModel -> apiInstanceModel.getAppName())
-                .collect(Collectors.toList());
-        return appMetaDao.selectAppMeta(appNames).size() == appNames.size() ? true : false;
-    }
+//    private Boolean haveAppMeta(List<ApiInstanceModel> apiInstanceModels) {
+//        List<String> appNames = apiInstanceModels.stream()
+//                .map(apiInstanceModel -> apiInstanceModel.getAppName())
+//                .collect(Collectors.toList());
+//        List<AppMetaEntity> appMetaEntities = appMetaDao.selectAppMeta(appNames);
+//        List<Long> appIds = appMetaEntities.stream().map(appMetaEntity -> appMetaEntity.getId()).collect(Collectors.toList());
+//        return appMetaDao.selectAppMeta(appNames).size() == appNames.size() ? true : false;
+//    }
 }

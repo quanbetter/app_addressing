@@ -9,7 +9,12 @@ import java.util.List;
 @Repository
 public interface ApiInstanceDao {
 
-    List<ApiInstance> selectInstanceByAppId(List<String> appIds);
+    List<ApiInstance> selectInstanceByAppName(List<String> appName);
 
     Integer insertInstance(List<ApiInstanceEntiry> instanceEntiries);
+
+    Integer updateInstance(ApiInstanceEntiry apiInstanceEntiry);
+
+    Integer deleteInstance(Long appId, String apiName);
+
 }

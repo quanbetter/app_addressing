@@ -3,9 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.quan.addressing.dao.AppInstanceDao">
-    <select id="getDefaultAppInstance" resultType="com.quan.addressing.entity.ApiInstance">
-        #         select ai.*,am.app_secret from app_instance as ai join app_id_meta as am on am.app_id = ai.app_id  where ai.is_default;
-    </select>
 
     <insert id="insertAppInstance" parameterType="com.quan.addressing.entity.AppInstanceEntity">
         insert into app_instance (app_id, address, port)

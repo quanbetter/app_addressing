@@ -3,13 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.quan.addressing.dao.ApiInstanceDao">
-    <select id="selectAllInstance" resultType="com.quan.addressing.entity.ApiInstance">
-        #         select i.*, concat(a.app_key, '&amp;', i.interface_name) as key_name
-#         from app_id_meta as a
-#                  join interface_instance as i on a.app_id = i.app_id;
-    </select>
 
-    <select id="selectInstanceByAppId" resultType="com.quan.addressing.entity.ApiInstance">
+    <select id="selectInstanceByAppName" resultType="com.quan.addressing.entity.ApiInstance">
         select am.app_name, concat(am.app_name, '&amp;', ii.interface_name) as key_name,am.app_secret,
         ii.interface_name, ii.path, ii.priority, ai.address,ai.port
         from app_meta as am
@@ -24,7 +19,22 @@
         insert into interface_instance (app_id,interface_name ,path,priority)
         values
         <foreach collection="list" item="instance" separator=",">
-            (#{instance.appId}#{instance.interfaceName},#{instance.path},#{instance.priority}})
+            (#{instance.appId},#{instance.interfaceName},#{instance.path},#{instance.priority})
         </foreach>
     </insert>
+
+    <update id="updateInstance">
+        update interface_instance
+        set interface_name = #{interfaceName},
+            path           = #{path},
+            priority       = #{priority}
+        where app_id = #{appId}
+    </update>
+
+    <delete id="deleteInstance">
+        delete
+        from interface_instance
+        where app_id = #{appId}
+          and interface_name = #{apiName}
+    </delete>
 </mapper>

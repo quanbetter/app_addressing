@@ -4,8 +4,7 @@ import lombok.Data;
 
 @Data
 public class AppInstanceEntity {
-    private Long id;
-    private Long appId;
+    private String appId;
     private String address;
     private Integer port;
 }

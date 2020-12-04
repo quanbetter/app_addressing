@@ -19,9 +19,9 @@
 
     <update id="updateAppMeta">
         update app_meta
-        set app_desc   = #{appMetaEntity.appDesc},
-            app_secret = #{appMetaEntity.appSecret}
-            where app_name = #{appMetaEntity.appName}
+        set app_desc   = #{appDesc},
+            app_secret = #{appSecret}
+        where app_name = #{appName}
     </update>
 
     <select id="selectAppMeta" resultType="com.quan.addressing.entity.AppMetaEntity">

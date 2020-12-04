@@ -5,7 +5,6 @@ import com.quan.addressing.dao.AppInstanceDao;
 import com.quan.addressing.dao.AppMetaDao;
 import com.quan.addressing.entity.AppInstanceEntity;
 import com.quan.addressing.entity.AppMetaEntity;
-import com.quan.addressing.model.ApiInstanceResult;
 import com.quan.addressing.model.AppInstanceModel;
 import com.quan.addressing.service.AppInstanceService;
 import org.springframework.beans.BeanUtils;
@@ -14,9 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class AppInstanceServiceImpl implements AppInstanceService {

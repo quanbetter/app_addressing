@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class AppInstanceModel {
+    private String appId;
     private String appName;
-    private Long appId;
     private String address;
     private Integer port;
 }
