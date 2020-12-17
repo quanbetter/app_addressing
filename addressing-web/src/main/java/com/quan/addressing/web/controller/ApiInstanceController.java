@@ -4,7 +4,7 @@ import cn.lalaframework.easyopen.annotation.Api;
 import cn.lalaframework.easyopen.annotation.ApiService;
 import cn.lalaframework.easyopen.doc.annotation.ApiDoc;
 import cn.lalaframework.easyopen.doc.annotation.ApiDocMethod;
-import com.quan.addressing.dto.ApiInstanceDelete;
+import com.quan.addressing.dto.ApiInstanceDeleteRequest;
 import com.quan.addressing.dto.ApiInstanceRequest;
 import com.quan.addressing.model.ApiInstanceModel;
 import com.quan.addressing.model.ApiInstanceResult;
@@ -48,7 +48,7 @@ public class ApiInstanceController {
 
     @Api(name = "interface", version = "delete")
     @ApiDocMethod(description = "删除接口实例")
-    public String delete(ApiInstanceDelete request) {
+    public String delete(ApiInstanceDeleteRequest request) {
         return apiInstanceService.deleteInstance(request.getAppName(), request.getApiName());
     }
 

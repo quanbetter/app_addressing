@@ -7,12 +7,16 @@ import cn.lalaframework.easyopen.doc.annotation.ApiDocMethod;
 import com.quan.addressing.dto.AppInstanceRequest;
 import com.quan.addressing.model.AppInstanceModel;
 import com.quan.addressing.service.AppInstanceService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @ApiService
 @ApiDoc("app实例模块")
 public class AppInstanceController {
+    Logger logger = LoggerFactory.getLogger(AppInstanceController.class);
+
     @Autowired
     AppInstanceService appInstanceService;
 

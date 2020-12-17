@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class ApiInstanceDelete {
+public class ApiInstanceDeleteRequest {
     @NotNull(message = "appName can not be null")
     private String appName;
 

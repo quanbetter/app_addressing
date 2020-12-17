@@ -2,17 +2,15 @@ package com.quan.addressing.service.impl;
 
 
 import com.quan.addressing.dao.AppMetaDao;
-import com.quan.addressing.entity.ApiInstance;
+import com.quan.addressing.entity.ApiInstanceSelectResult;
 import com.quan.addressing.entity.ApiInstanceEntiry;
 import com.quan.addressing.model.ApiInstanceModel;
 import com.quan.addressing.util.InstanceHelper;
 import com.quan.addressing.dao.ApiInstanceDao;
 import com.quan.addressing.model.ApiInstanceResult;
 import com.quan.addressing.service.ApiInstanceService;
-import org.omg.PortableInterceptor.INACTIVE;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,8 +33,8 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
 
     @Override
     public Map<String, List<ApiInstanceResult>> selectInstanceByAppName(List<String> appNames) {
-        List<ApiInstance> ApiInstances = apiInstanceDao.selectInstanceByAppName(appNames);
-        Map<String, List<ApiInstanceResult>> resultMap = toMap(ApiInstances);
+        List<ApiInstanceSelectResult> apiInstanceSelectResults = apiInstanceDao.selectInstanceByAppName(appNames);
+        Map<String, List<ApiInstanceResult>> resultMap = toMap(apiInstanceSelectResults);
         return resultMap;
     }
 
@@ -90,33 +88,32 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
     }
 
 
-    private Map<String, List<ApiInstanceResult>> toMap(List<ApiInstance> apiInstances) {
-        Map<String, List<ApiInstance>> instanceMap = new HashMap<>();
+    private Map<String, List<ApiInstanceResult>> toMap(List<ApiInstanceSelectResult> apiInstanceSelectResults) {
+        Map<String, List<ApiInstanceSelectResult>> instanceMap = new HashMap<>();
 
-        for (ApiInstance apiInstance : apiInstances) {
-            if (instanceMap.containsKey(apiInstance.getKeyName())) {
-                instanceMap.get(apiInstance.getKeyName()).add(apiInstance);
+        for (ApiInstanceSelectResult apiInstanceSelectResult : apiInstanceSelectResults) {
+            if (instanceMap.containsKey(apiInstanceSelectResult.getKeyName())) {
+                instanceMap.get(apiInstanceSelectResult.getKeyName()).add(apiInstanceSelectResult);
                 continue;
             }
-            List<ApiInstance> apiInstances1 = new ArrayList<>();
-            apiInstances1.add(apiInstance);
-            instanceMap.put(apiInstance.getKeyName(), apiInstances1);
+            List<ApiInstanceSelectResult> apiInstances1SelectResult = new ArrayList<>();
+            apiInstances1SelectResult.add(apiInstanceSelectResult);
+            instanceMap.put(apiInstanceSelectResult.getKeyName(), apiInstances1SelectResult);
         }
-
         return toInstanceResult(instanceMap);
     }
 
-    private Map<String, List<ApiInstanceResult>> toInstanceResult(Map<String, List<ApiInstance>> apiInstancesMap) {
+    private Map<String, List<ApiInstanceResult>> toInstanceResult(Map<String, List<ApiInstanceSelectResult>> apiInstancesMap) {
         Map<String, List<ApiInstanceResult>> apiInstanceResults = new HashMap<>();
 
         for (String key : apiInstancesMap.keySet()) {
             InstanceHelper.sortByPriority(apiInstancesMap.get(key));//排完序后进行组装
-            List<ApiInstance> instanceList = apiInstancesMap.get(key);
+            List<ApiInstanceSelectResult> instanceList = apiInstancesMap.get(key);
 
-            List<ApiInstanceResult> results = instanceList.stream().map(apiInstance ->
+            List<ApiInstanceResult> results = instanceList.stream().map(apiInstanceSelectResult ->
             {
                 ApiInstanceResult apiInstanceResult = new ApiInstanceResult();
-                BeanUtils.copyProperties(apiInstance, apiInstanceResult);
+                BeanUtils.copyProperties(apiInstanceSelectResult, apiInstanceResult);
                 return apiInstanceResult;
             }).distinct().collect(Collectors.toList());
 

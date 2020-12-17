@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.quan.addressing.dao.ApiInstanceDao">
 
-    <select id="selectInstanceByAppName" resultType="com.quan.addressing.entity.ApiInstance">
+    <select id="selectInstanceByAppName" resultType="com.quan.addressing.entity.ApiInstanceSelectResult">
         select am.app_name, concat(am.app_name, '&amp;', ii.interface_name) as key_name,am.app_secret,
         ii.interface_name, ii.path, ii.priority, ai.address,ai.port
         from app_meta as am
