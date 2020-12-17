@@ -44,6 +44,12 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.73</version>
         </dependency>
+
+        <dependency>
+            <groupId>cn.lalaframework</groupId>
+            <artifactId>lala-easyopen</artifactId>
+            <version>1.1.8.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>

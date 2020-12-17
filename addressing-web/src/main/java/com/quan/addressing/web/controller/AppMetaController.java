@@ -1,54 +1,51 @@
 package com.quan.addressing.web.controller;
 
+import cn.lalaframework.easyopen.annotation.Api;
+import cn.lalaframework.easyopen.annotation.ApiService;
+import cn.lalaframework.easyopen.doc.annotation.ApiDoc;
+import cn.lalaframework.easyopen.doc.annotation.ApiDocMethod;
 import com.quan.addressing.dto.AppMetaRequest;
 import com.quan.addressing.model.AppMetaModel;
 import com.quan.addressing.service.AppMetaService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.List;
 
-@RestController
-@RequestMapping("/appMeta")
-public class AppMetaController extends BaseController {
+@ApiService
+@ApiDoc("app元数据模块")
+public class AppMetaController {
     @Autowired
     AppMetaService appMetaService;
 
-    @RequestMapping("/add")
-    public Object addAppMeta(@Valid @RequestBody AppMetaRequest appMetaRequest, BindingResult bindingResult) {
-        if (!checkParameter(bindingResult)) {
-            return jsonObject;
-        }
+    @Api(name = "appMeta", version = "add")
+    @ApiDocMethod(description = "添加App元数据")
+    public Object addAppMeta(@Valid @RequestBody AppMetaRequest appMetaRequest) {
         AppMetaModel appMetaModel = new AppMetaModel();
         BeanUtils.copyProperties(appMetaRequest, appMetaModel);
         return appMetaService.insertAppMeta(appMetaModel);
     }
 
-    @RequestMapping("/delete")
+    @Api(name = "appMeta", version = "delete")
+    @ApiDocMethod(description = "删除App元数据")
     public String deleteAppMeta(@RequestBody List<String> appIds) {
         return appMetaService.deleteAppMeta(appIds);
     }
 
-    @RequestMapping("/findByName")
+    @Api(name = "appMeta", version = "findByName")
+    @ApiDocMethod(description = "按照AppName获取App元数据")
     public List<AppMetaModel> findByName(@RequestBody List<String> appNames) {
         return appMetaService.selectAppMeta(appNames);
     }
 
-    @RequestMapping("/update")
-    public Object updateAppMeta(@Valid @RequestBody AppMetaRequest appMetaRequest, BindingResult bindingResult) {
-        if (!checkParameter(bindingResult)) {
-            return jsonObject;
-        }
+    @Api(name = "appMeta", version = "update")
+    @ApiDocMethod(description = "跟新App元数据")
+    public Object updateAppMeta(@RequestBody AppMetaRequest appMetaRequest) {
         AppMetaModel appMetaModel = new AppMetaModel();
         BeanUtils.copyProperties(appMetaRequest, appMetaModel);
         return appMetaService.updateAppMeta(appMetaModel);
     }
-
-
 }

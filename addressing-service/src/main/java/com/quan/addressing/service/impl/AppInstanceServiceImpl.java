@@ -9,6 +9,7 @@ import com.quan.addressing.model.AppInstanceModel;
 import com.quan.addressing.service.AppInstanceService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,7 +37,14 @@ public class AppInstanceServiceImpl implements AppInstanceService {
         AppInstanceEntity appInstanceEntity = new AppInstanceEntity();
         BeanUtils.copyProperties(appInstanceModel, appInstanceEntity);
         appInstanceEntity.setAppId(appMetaEntities.get(0).getId());
-        appInstanceDao.insertAppInstance(appInstanceEntity);
+        try{
+            appInstanceDao.insertAppInstance(appInstanceEntity);
+        }catch (Exception e){
+            if (e.equals(DuplicateKeyException.class)){
+                return "this appInstance is already exist";
+            }
+          return "error";
+        }
         return "done";
     }
 }

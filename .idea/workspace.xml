@@ -20,11 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d8a27bb-74c4-42c9-ae7f-3fe4d0522639" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressing-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/ApiInstanceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/ApiInstanceRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/ApiInstanceRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/ApiInstanceRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppInstanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/BaseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/AppMetaRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/AppMetaRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/ApiInstanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/ApiInstanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppInstanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppInstanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppMetaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppMetaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/BaseController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1.0.1.Release" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -145,6 +156,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AddressingWebApplication (1)" />
+        <item itemvalue="Application.InterfaceInstanceAutoConfig" />
+        <item itemvalue="Spring Boot.AddressingWebApplication (1)" />
         <item itemvalue="Spring Boot.AddressingWebApplication" />
       </list>
     </recent_temporary>
@@ -164,7 +177,7 @@
       <workItem from="1606821366173" duration="68939000" />
       <workItem from="1607303822868" duration="1022000" />
       <workItem from="1608105664100" duration="4662000" />
-      <workItem from="1608110437300" duration="7022000" />
+      <workItem from="1608110437300" duration="11166000" />
     </task>
     <servers />
   </component>
@@ -197,11 +210,11 @@
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608107098815" />
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1606875746883" />
-    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1607064002461">
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1608175696096">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1607064002461" />
-    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1606889535454" />
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1608175696096" />
     <state x="186" y="381" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606963958033">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -224,70 +237,70 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="498" height="466" key="DebuggerActiveHint/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1607051360871" />
-    <state width="1398" height="310" key="GridCell.Tab.0.bottom" timestamp="1608174538998">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.0.bottom" timestamp="1608183771284">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.0.bottom/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214456" />
-    <state width="1398" height="310" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608174538998" />
+    <state width="1398" height="254" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608183275147" />
     <state width="1398" height="338" key="GridCell.Tab.0.bottom/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616557" />
     <state width="1398" height="209" key="GridCell.Tab.0.bottom/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808887" />
-    <state width="1398" height="308" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608173953605" />
-    <state width="1398" height="310" key="GridCell.Tab.0.center" timestamp="1608174538996">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608183771284" />
+    <state width="1398" height="385" key="GridCell.Tab.0.center" timestamp="1608183771282">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.0.center/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214454" />
-    <state width="1398" height="310" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608174538996" />
+    <state width="1398" height="254" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608183275146" />
     <state width="1398" height="338" key="GridCell.Tab.0.center/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616556" />
     <state width="1398" height="209" key="GridCell.Tab.0.center/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808885" />
-    <state width="1398" height="308" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1608173953603" />
-    <state width="1398" height="310" key="GridCell.Tab.0.left" timestamp="1608174538995">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1608183771282" />
+    <state width="1398" height="385" key="GridCell.Tab.0.left" timestamp="1608183771281">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.0.left/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214453" />
-    <state width="1398" height="310" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608174538995" />
+    <state width="1398" height="254" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608183275145" />
     <state width="1398" height="338" key="GridCell.Tab.0.left/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616554" />
     <state width="1398" height="209" key="GridCell.Tab.0.left/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808883" />
-    <state width="1398" height="308" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1608173953602" />
-    <state width="1398" height="310" key="GridCell.Tab.0.right" timestamp="1608174538997">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1608183771281" />
+    <state width="1398" height="385" key="GridCell.Tab.0.right" timestamp="1608183771283">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.0.right/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214455" />
-    <state width="1398" height="310" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608174538997" />
+    <state width="1398" height="254" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608183275146" />
     <state width="1398" height="338" key="GridCell.Tab.0.right/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616556" />
     <state width="1398" height="209" key="GridCell.Tab.0.right/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808886" />
-    <state width="1398" height="308" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1608173953604" />
-    <state width="1398" height="310" key="GridCell.Tab.1.bottom" timestamp="1608174539001">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1608183771283" />
+    <state width="1398" height="385" key="GridCell.Tab.1.bottom" timestamp="1608183771288">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.1.bottom/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214460" />
-    <state width="1398" height="310" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608174539001" />
+    <state width="1398" height="254" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608183275149" />
     <state width="1398" height="338" key="GridCell.Tab.1.bottom/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616564" />
     <state width="1398" height="209" key="GridCell.Tab.1.bottom/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808891" />
-    <state width="1398" height="308" key="GridCell.Tab.1.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608173953610" />
-    <state width="1398" height="310" key="GridCell.Tab.1.center" timestamp="1608174538999">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.1.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608183771288" />
+    <state width="1398" height="385" key="GridCell.Tab.1.center" timestamp="1608183771286">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.1.center/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214458" />
-    <state width="1398" height="310" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1608174538999" />
+    <state width="1398" height="254" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1608183275148" />
     <state width="1398" height="338" key="GridCell.Tab.1.center/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616562" />
     <state width="1398" height="209" key="GridCell.Tab.1.center/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808889" />
-    <state width="1398" height="308" key="GridCell.Tab.1.center/0.23.1440.831@0.23.1440.831" timestamp="1608173953608" />
-    <state width="1398" height="310" key="GridCell.Tab.1.left" timestamp="1608174538999">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.1.center/0.23.1440.831@0.23.1440.831" timestamp="1608183771286" />
+    <state width="1398" height="385" key="GridCell.Tab.1.left" timestamp="1608183771285">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.1.left/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214457" />
-    <state width="1398" height="310" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1608174538999" />
+    <state width="1398" height="254" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1608183275147" />
     <state width="1398" height="338" key="GridCell.Tab.1.left/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616561" />
     <state width="1398" height="209" key="GridCell.Tab.1.left/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808888" />
-    <state width="1398" height="308" key="GridCell.Tab.1.left/0.23.1440.831@0.23.1440.831" timestamp="1608173953607" />
-    <state width="1398" height="310" key="GridCell.Tab.1.right" timestamp="1608174539000">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="385" key="GridCell.Tab.1.left/0.23.1440.831@0.23.1440.831" timestamp="1608183771285" />
+    <state width="1398" height="385" key="GridCell.Tab.1.right" timestamp="1608183771287">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="439" key="GridCell.Tab.1.right/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214459" />
-    <state width="1398" height="310" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1608174539000" />
+    <state width="1398" height="254" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1608183275149" />
     <state width="1398" height="338" key="GridCell.Tab.1.right/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616563" />
     <state width="1398" height="209" key="GridCell.Tab.1.right/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808890" />
-    <state width="1398" height="308" key="GridCell.Tab.1.right/0.23.1440.831@0.23.1440.831" timestamp="1608173953609" />
+    <state width="1398" height="385" key="GridCell.Tab.1.right/0.23.1440.831@0.23.1440.831" timestamp="1608183771287" />
     <state x="258" y="112" key="Maven.ArtifactSearchDialog" timestamp="1608171215027">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -324,6 +337,11 @@
     </state>
     <state x="172" y="156" key="new project wizard/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1606974162082" />
     <state x="172" y="156" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1606963511922" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1608183135736">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1608183135736" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1608176137656" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -350,7 +368,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java</url>
-          <line>42</line>
+          <line>49</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -380,28 +398,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java</url>
-          <line>22</line>
+          <line>26</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java</url>
-          <line>23</line>
+          <line>27</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java</url>
-          <line>46</line>
+          <line>44</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/BaseController.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="58" />
+          <line>51</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

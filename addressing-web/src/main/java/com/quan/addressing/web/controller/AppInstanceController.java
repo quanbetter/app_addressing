@@ -1,30 +1,26 @@
 package com.quan.addressing.web.controller;
 
+import cn.lalaframework.easyopen.annotation.Api;
+import cn.lalaframework.easyopen.annotation.ApiService;
+import cn.lalaframework.easyopen.doc.annotation.ApiDoc;
+import cn.lalaframework.easyopen.doc.annotation.ApiDocMethod;
 import com.quan.addressing.dto.AppInstanceRequest;
 import com.quan.addressing.model.AppInstanceModel;
 import com.quan.addressing.service.AppInstanceService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
-
-@RestController
-@RequestMapping("/appInstance")
-public class AppInstanceController extends BaseController {
+@ApiService
+@ApiDoc("app实例模块")
+public class AppInstanceController {
     @Autowired
     AppInstanceService appInstanceService;
 
-    @RequestMapping("/add")
-    public Object addAppInstance(@Valid @RequestBody AppInstanceRequest appInstanceRequest, BindingResult bindingResult) {
-       if (!checkParameter(bindingResult)){
-           return jsonObject;
-       }
+    @Api(name = "appInstance", version = "add")
+    @ApiDocMethod(description = "添加app实例")
+    public Object addAppInstance(AppInstanceRequest appInstanceRequest) {
         AppInstanceModel appInstanceModel = new AppInstanceModel();
-        BeanUtils.copyProperties(appInstanceRequest,appInstanceModel);
+        BeanUtils.copyProperties(appInstanceRequest, appInstanceModel);
         return appInstanceService.insertAppInstance(appInstanceModel);
     }
 }
