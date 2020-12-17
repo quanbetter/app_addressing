@@ -11,7 +11,7 @@ public interface ApiInstanceDao {
 
     List<ApiInstance> selectInstanceByAppName(List<String> appName);
 
-    Integer insertInstance(List<ApiInstanceEntiry> instanceEntiries);
+    Integer insertInstance(ApiInstanceEntiry instanceEntiries);
 
     Integer updateInstance(ApiInstanceEntiry apiInstanceEntiry);
 

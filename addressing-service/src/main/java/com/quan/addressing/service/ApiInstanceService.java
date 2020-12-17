@@ -9,9 +9,9 @@ import java.util.Map;
 public interface ApiInstanceService {
     Map<String, List<ApiInstanceResult>> selectInstanceByAppName(List<String> appIds);
 
-    String insertInstance(List<ApiInstanceModel> apiInstanceModels);
+    String insertInstance(ApiInstanceModel apiInstanceModel);
 
-    String deleteInstance(Long appId,String apiName);
+    String deleteInstance(String  appName, String apiName);
 
     String updateInstance(ApiInstanceModel apiInstanceModel);
 }

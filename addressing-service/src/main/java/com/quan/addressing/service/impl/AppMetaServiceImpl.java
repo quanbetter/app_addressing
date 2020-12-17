@@ -12,6 +12,8 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,26 +26,17 @@ public class AppMetaServiceImpl implements AppMetaService {
 
     @Override
     @Transactional
-    public String insertAppMeta(List<AppMetaModel> appMetaModels) {
-        String result = "";
-        List<AppMetaEntity> appMetaEntities = appMetaModels.stream().map(appMetaModel -> {
-            AppMetaEntity appMetaEntity = new AppMetaEntity();
-            BeanUtils.copyProperties(appMetaModel, appMetaEntity);
-            return appMetaEntity;
-        }).collect(Collectors.toList());
-
-        Integer count = 0;
-        try {
-            count = appMetaDao.insertAppMeta(appMetaEntities);
-        } catch (Exception e) {
-            if (e.getClass() == DuplicateKeyException.class) {
-                result = "Some appMeta in list have already in database";
-            }
+    public String insertAppMeta(AppMetaModel appMetaModel) {
+        AppMetaEntity appMetaEntity = new AppMetaEntity();
+        BeanUtils.copyProperties(appMetaModel, appMetaEntity);
+        List<String> names = new ArrayList<>();
+        names.add(appMetaEntity.getAppName());
+        List<AppMetaEntity> selectResult = appMetaDao.selectAppMeta(names);
+        if (!selectResult.isEmpty()){
+            return "this appName had exist";
         }
-        if (count == appMetaEntities.size()) {
-            result = "All appMeta had add";
-        }
-        return result;
+        appMetaDao.insertAppMeta(appMetaEntity);
+        return "done";
     }
 
     @Override

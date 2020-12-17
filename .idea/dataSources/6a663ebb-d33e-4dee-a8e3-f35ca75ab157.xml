@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="MySQL - interface_meta@127.0.0.1">
+<dataSource name="interface_meta@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
     <root id="1">
       <ServerVersion>5.7.25</ServerVersion>
@@ -822,8 +822,10 @@
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="250" parent="241" name="fk_app_instance_app_meta">
-      <ColNames>app_id</ColNames>
+    <index id="250" parent="241" name="app_instance_app_id_address_uindex">
+      <ColNames>app_id
+address</ColNames>
+      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
     <key id="251" parent="241" name="PRIMARY">
@@ -831,12 +833,17 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="252" parent="241" name="fk_app_instance_app_meta">
+    <key id="252" parent="241" name="app_instance_app_id_address_uindex">
+      <ColNames>app_id
+address</ColNames>
+      <UnderlyingIndexName>app_instance_app_id_address_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="253" parent="241" name="fk_app_instance_app_meta">
       <ColNames>app_id</ColNames>
       <RefTableName>app_meta</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="253" parent="242" name="id">
+    <column id="254" parent="242" name="id">
       <Position>1</Position>
       <Comment>id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -844,28 +851,28 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="242" name="app_name">
+    <column id="255" parent="242" name="app_name">
       <Position>2</Position>
       <Comment>提供接口的服务id</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="242" name="app_desc">
+    <column id="256" parent="242" name="app_desc">
       <Position>3</Position>
       <Comment>app信息简述</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="242" name="app_secret">
+    <column id="257" parent="242" name="app_secret">
       <Position>4</Position>
       <Comment>签名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="242" name="updated_at">
+    <column id="258" parent="242" name="updated_at">
       <Position>5</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -874,7 +881,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="258" parent="242" name="created_at">
+    <column id="259" parent="242" name="created_at">
       <Position>6</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -882,25 +889,25 @@
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="259" parent="242" name="appId__index">
+    <index id="260" parent="242" name="appId__index">
       <ColNames>app_name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="260" parent="242" name="index_app_id">
+    <index id="261" parent="242" name="index_app_id">
       <ColNames>id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="261" parent="242" name="PRIMARY">
+    <key id="262" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="262" parent="242" name="appId__index">
+    <key id="263" parent="242" name="appId__index">
       <ColNames>app_name</ColNames>
       <UnderlyingIndexName>appId__index</UnderlyingIndexName>
     </key>
-    <column id="263" parent="243" name="id">
+    <column id="264" parent="243" name="id">
       <Position>1</Position>
       <Comment>id</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -908,28 +915,28 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="243" name="app_id">
+    <column id="265" parent="243" name="app_id">
       <Position>2</Position>
       <Comment>提供接口的服务名</Comment>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="243" name="interface_name">
+    <column id="266" parent="243" name="interface_name">
       <Position>3</Position>
       <Comment>接口名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="243" name="path">
+    <column id="267" parent="243" name="path">
       <Position>4</Position>
       <Comment>接口对应的路径</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="243" name="priority">
+    <column id="268" parent="243" name="priority">
       <Position>5</Position>
       <Comment>优先级</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -937,7 +944,7 @@
       <DefaultExpression>9999</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="243" name="updated_at">
+    <column id="269" parent="243" name="updated_at">
       <Position>6</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -946,7 +953,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="269" parent="243" name="created_at">
+    <column id="270" parent="243" name="created_at">
       <Position>7</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
@@ -954,27 +961,27 @@
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="270" parent="243" name="interface_instance_id_uindex">
+    <index id="271" parent="243" name="interface_instance_id_uindex">
       <ColNames>app_id
 interface_name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="271" parent="243" name="appId__index">
+    <index id="272" parent="243" name="appId__index">
       <ColNames>app_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="272" parent="243" name="PRIMARY">
+    <key id="273" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="273" parent="243" name="interface_instance_id_uindex">
+    <key id="274" parent="243" name="interface_instance_id_uindex">
       <ColNames>app_id
 interface_name</ColNames>
       <UnderlyingIndexName>interface_instance_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="274" parent="243" name="fk_interface_instance_app_meta">
+    <foreign-key id="275" parent="243" name="fk_interface_instance_app_meta">
       <ColNames>app_id</ColNames>
       <RefTableName>app_meta</RefTableName>
       <RefColNames>id</RefColNames>

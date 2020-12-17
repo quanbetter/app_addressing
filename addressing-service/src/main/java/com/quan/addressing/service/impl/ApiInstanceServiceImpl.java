@@ -9,6 +9,7 @@ import com.quan.addressing.util.InstanceHelper;
 import com.quan.addressing.dao.ApiInstanceDao;
 import com.quan.addressing.model.ApiInstanceResult;
 import com.quan.addressing.service.ApiInstanceService;
+import org.omg.PortableInterceptor.INACTIVE;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -40,38 +42,50 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
 
     @Override
     @Transactional
-    public String insertInstance(List<ApiInstanceModel> apiInstanceModels) {
+    public String insertInstance(ApiInstanceModel apiInstanceModel) {
         String result = "";
-        List<ApiInstanceEntiry> instanceEntiries = apiInstanceModels.stream().map(apiInstanceModel -> {
-            ApiInstanceEntiry apiInstanceEntiry = new ApiInstanceEntiry();
-            BeanUtils.copyProperties(apiInstanceModel, apiInstanceEntiry);
-            return apiInstanceEntiry;
-        }).collect(Collectors.toList());
-        try {
-            apiInstanceDao.insertInstance(instanceEntiries);
-            result = "ALL instance add successful";
-        } catch (Exception e) {
-            e.printStackTrace();
-            if (e.getClass() == DataIntegrityViolationException.class) {
-                result = "please confirm you appId had exist in app_Meta_table";
-            } else if (e.getClass() == DuplicateKeyException.class) {
-                result = "Some appId's interface is already exist,please use update";
+        //先查询AppName插叙appId
+        Long appId = appMetaDao.selectAppMetaGetId(apiInstanceModel.getAppName());
+        //
+        ApiInstanceEntiry apiInstanceEntiry = new ApiInstanceEntiry();
+        BeanUtils.copyProperties(apiInstanceModel, apiInstanceEntiry);
+        if (!Objects.isNull(appId)) {
+            apiInstanceEntiry.setAppId(appId);
+            try {
+                apiInstanceDao.insertInstance(apiInstanceEntiry);
+                result = "ALL instance add successful";
+            } catch (Exception e) {
+                e.printStackTrace();
+                if (e.getClass() == DuplicateKeyException.class) {
+                    result = "Some appId's interface is already exist,please use update";
+                }
             }
+        } else {
+            result = "please confirm you appId had exist in app_Meta_table";
         }
         return result;
     }
 
     @Override
-    public String deleteInstance(Long appId, String apiName) {
-        Integer count = apiInstanceDao.deleteInstance(appId, apiName);
+    public String deleteInstance(String appName, String apiName) {
+        Integer count = 0;
+        Long appId =appMetaDao.selectAppMetaGetId(appName);
+        if (Objects.nonNull(appId)){
+            count = apiInstanceDao.deleteInstance(appId, apiName);
+        }
         return "had delete " + count + "data";
     }
 
     @Override
     public String updateInstance(ApiInstanceModel apiInstanceModel) {
+        Integer count = 0;
         ApiInstanceEntiry apiInstanceEntiry = new ApiInstanceEntiry();
-        BeanUtils.copyProperties(apiInstanceModel,apiInstanceEntiry);
-        Integer count = apiInstanceDao.updateInstance(apiInstanceEntiry);
+        BeanUtils.copyProperties(apiInstanceModel, apiInstanceEntiry);
+        Long appId = appMetaDao.selectAppMetaGetId(apiInstanceModel.getAppName());
+        apiInstanceEntiry.setAppId(appId);
+        if (Objects.nonNull(appId)){
+            count = apiInstanceDao.updateInstance(apiInstanceEntiry);
+        }
         return "had update " + count + "data";
     }
 

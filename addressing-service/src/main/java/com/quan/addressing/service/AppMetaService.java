@@ -5,7 +5,7 @@ import com.quan.addressing.model.AppMetaModel;
 import java.util.List;
 
 public interface AppMetaService {
-    String insertAppMeta(List<AppMetaModel> appMetaModels);
+    String insertAppMeta(AppMetaModel appMetaModel);
 
     String deleteAppMeta(List<String> appName);
 

@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class ApiInstanceModel {
-    private Long appId;
+    private String appName;
     private String interfaceName;
     private String path;
     private Long priority;

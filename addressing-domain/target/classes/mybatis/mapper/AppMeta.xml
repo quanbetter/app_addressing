@@ -4,10 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.quan.addressing.dao.AppMetaDao">
     <insert id="insertAppMeta">
-        insert into app_meta(app_name, app_desc, app_secret) values
-        <foreach collection="list" item="appMeta" separator=",">
-            (#{appMeta.appName},#{appMeta.appDesc},#{appMeta.appSecret})
-        </foreach>
+        insert into app_meta(app_name, app_desc, app_secret)
+        values (#{appName}, #{appDesc}, #{appSecret})
     </insert>
 
     <delete id="deleteAppMeta">
@@ -29,6 +27,12 @@
         <foreach collection="list" separator="or" item="appName">
             app_name = #{appName}
         </foreach>
+    </select>
+
+    <select id="selectAppMetaGetId" resultType="Long">
+        select id
+        from app_meta
+        where app_name = #{appName}
     </select>
 
 </mapper>

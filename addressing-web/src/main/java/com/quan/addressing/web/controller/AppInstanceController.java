@@ -1,7 +1,9 @@
 package com.quan.addressing.web.controller;
 
+import com.quan.addressing.dto.AppInstanceRequest;
 import com.quan.addressing.model.AppInstanceModel;
 import com.quan.addressing.service.AppInstanceService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +16,9 @@ public class AppInstanceController {
     AppInstanceService appInstanceService;
 
     @RequestMapping("/add")
-    public String addAppInstance(@RequestBody AppInstanceModel appInstanceModel){
+    public String addAppInstance(@RequestBody AppInstanceRequest appInstanceRequest) {
+        AppInstanceModel appInstanceModel = new AppInstanceModel();
+        BeanUtils.copyProperties(appInstanceRequest,appInstanceModel);
         return appInstanceService.insertAppInstance(appInstanceModel);
     }
 }

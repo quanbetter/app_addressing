@@ -16,11 +16,8 @@
     </select>
 
     <insert id="insertInstance">
-        insert into interface_instance (app_id,interface_name ,path,priority)
-        values
-        <foreach collection="list" item="instance" separator=",">
-            (#{instance.appId},#{instance.interfaceName},#{instance.path},#{instance.priority})
-        </foreach>
+        insert into interface_instance (app_id, interface_name, path, priority)
+        values (#{appId}, #{interfaceName}, #{path}, #{priority})
     </insert>
 
     <update id="updateInstance">

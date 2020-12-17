@@ -1,7 +1,9 @@
 package com.quan.addressing.web.controller;
 
+import com.quan.addressing.dto.AppMetaRequest;
 import com.quan.addressing.model.AppMetaModel;
 import com.quan.addressing.service.AppMetaService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,22 +19,26 @@ public class AppMetaController {
     AppMetaService appMetaService;
 
     @RequestMapping("/add")
-    public String addAppMeta(@RequestBody List<AppMetaModel> metaModels){
-        return appMetaService.insertAppMeta(metaModels);
+    public String addAppMeta(@RequestBody AppMetaRequest appMetaRequest) {
+        AppMetaModel appMetaModel = new AppMetaModel();
+        BeanUtils.copyProperties(appMetaRequest,appMetaModel);
+        return appMetaService.insertAppMeta(appMetaModel);
     }
 
     @RequestMapping("/delete")
-    public String deleteAppMeta(@RequestBody List<String>  appIds){
+    public String deleteAppMeta(@RequestBody List<String> appIds) {
         return appMetaService.deleteAppMeta(appIds);
     }
 
     @RequestMapping("/findByName")
-    public List<AppMetaModel> findByName(@RequestBody List<String>  appNames){
+    public List<AppMetaModel> findByName(@RequestBody List<String> appNames) {
         return appMetaService.selectAppMeta(appNames);
     }
 
     @RequestMapping("/update")
-    public String updateAppMeta(@RequestBody AppMetaModel appMetaModel){
+    public String updateAppMeta(@RequestBody AppMetaRequest appMetaRequest) {
+        AppMetaModel appMetaModel = new AppMetaModel();
+        BeanUtils.copyProperties(appMetaRequest, appMetaModel);
         return appMetaService.updateAppMeta(appMetaModel);
     }
 

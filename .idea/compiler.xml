@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="addressing-domain" />
         <module name="addressing-service" />
-        <module name="addressing-web" />
         <module name="addressing-common" />
+        <module name="addressing-web" />
+        <module name="addressing-domain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
