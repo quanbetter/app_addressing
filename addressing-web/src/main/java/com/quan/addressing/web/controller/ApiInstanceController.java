@@ -6,6 +6,7 @@ import cn.lalaframework.easyopen.doc.annotation.ApiDoc;
 import cn.lalaframework.easyopen.doc.annotation.ApiDocMethod;
 import com.quan.addressing.dto.ApiInstanceDeleteRequest;
 import com.quan.addressing.dto.ApiInstanceRequest;
+import com.quan.addressing.dto.AppNamesResquest;
 import com.quan.addressing.model.ApiInstanceModel;
 import com.quan.addressing.model.ApiInstanceResult;
 import com.quan.addressing.service.ApiInstanceService;
@@ -32,15 +33,15 @@ public class ApiInstanceController {
 
     @Api(name = "interface", version = "getInstanceByAppName")
     @ApiDocMethod(description = "获取接口实例列表")
-    public Map<String, List<ApiInstanceResult>> getInstance(List<String> appNames) {
-        Map<String, List<ApiInstanceResult>> instances = apiInstanceService.selectInstanceByAppName(appNames);
+    public Map<String, List<ApiInstanceResult>> getApiInstance(AppNamesResquest request) {
+        Map<String, List<ApiInstanceResult>> instances = apiInstanceService.selectInstanceByAppName(request.getAppNames());
         logger.info("already get API instance {}", instances.size());
         return instances;
     }
 
     @Api(name = "interface", version = "addInstance")
     @ApiDocMethod(description = "添加接口实例")
-    public Object addInstance(ApiInstanceRequest apiInstanceRequest) {
+    public Object addApiInstance(ApiInstanceRequest apiInstanceRequest) {
         ApiInstanceModel apiInstanceModel = new ApiInstanceModel();
         BeanUtils.copyProperties(apiInstanceRequest, apiInstanceModel);
         return apiInstanceService.insertInstance(apiInstanceModel);
@@ -48,13 +49,13 @@ public class ApiInstanceController {
 
     @Api(name = "interface", version = "delete")
     @ApiDocMethod(description = "删除接口实例")
-    public String delete(ApiInstanceDeleteRequest request) {
+    public String deleteApiInstance(ApiInstanceDeleteRequest request) {
         return apiInstanceService.deleteInstance(request.getAppName(), request.getApiName());
     }
 
     @Api(name = "interface", version = "update")
     @ApiDocMethod(description = "更新接口实例")
-    public Object update(ApiInstanceRequest apiInstanceRequest) {
+    public Object updateApiInstance(ApiInstanceRequest apiInstanceRequest) {
         ApiInstanceModel apiInstanceModel = new ApiInstanceModel();
         BeanUtils.copyProperties(apiInstanceRequest, apiInstanceModel);
         return apiInstanceService.updateInstance(apiInstanceModel);

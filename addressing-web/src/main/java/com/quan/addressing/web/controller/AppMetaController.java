@@ -5,6 +5,7 @@ import cn.lalaframework.easyopen.annotation.ApiService;
 import cn.lalaframework.easyopen.doc.annotation.ApiDoc;
 import cn.lalaframework.easyopen.doc.annotation.ApiDocMethod;
 import com.quan.addressing.dto.AppMetaRequest;
+import com.quan.addressing.dto.AppNamesResquest;
 import com.quan.addressing.model.AppMetaModel;
 import com.quan.addressing.service.AppMetaService;
 import org.springframework.beans.BeanUtils;
@@ -30,14 +31,14 @@ public class AppMetaController {
 
     @Api(name = "appMeta", version = "delete")
     @ApiDocMethod(description = "删除App元数据")
-    public String deleteAppMeta(@RequestBody List<String> appIds) {
-        return appMetaService.deleteAppMeta(appIds);
+    public String deleteAppMeta(@RequestBody AppNamesResquest request) {
+        return appMetaService.deleteAppMeta(request.getAppNames());
     }
 
     @Api(name = "appMeta", version = "findByName")
     @ApiDocMethod(description = "按照AppName获取App元数据")
-    public List<AppMetaModel> findByName(@RequestBody List<String> appNames) {
-        return appMetaService.selectAppMeta(appNames);
+    public List<AppMetaModel> findByName(@RequestBody AppNamesResquest request) {
+        return appMetaService.selectAppMeta(request.getAppNames());
     }
 
     @Api(name = "appMeta", version = "update")

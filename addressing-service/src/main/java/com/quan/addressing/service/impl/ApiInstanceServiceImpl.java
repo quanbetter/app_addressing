@@ -67,8 +67,8 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
     @Override
     public String deleteInstance(String appName, String apiName) {
         Integer count = 0;
-        Long appId =appMetaDao.selectAppMetaGetId(appName);
-        if (Objects.nonNull(appId)){
+        Long appId = appMetaDao.selectAppMetaGetId(appName);
+        if (Objects.nonNull(appId)) {
             count = apiInstanceDao.deleteInstance(appId, apiName);
         }
         return "had delete " + count + "data";
@@ -81,31 +81,30 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
         BeanUtils.copyProperties(apiInstanceModel, apiInstanceEntiry);
         Long appId = appMetaDao.selectAppMetaGetId(apiInstanceModel.getAppName());
         apiInstanceEntiry.setAppId(appId);
-        if (Objects.nonNull(appId)){
+        if (Objects.nonNull(appId)) {
             count = apiInstanceDao.updateInstance(apiInstanceEntiry);
         }
         return "had update " + count + "data";
     }
 
 
-    private Map<String, List<ApiInstanceResult>> toMap(List<ApiInstanceSelectResult> apiInstanceSelectResults) {
+    private Map<String, List<ApiInstanceResult>> toMap(List<ApiInstanceSelectResult> apiInstances) {
         Map<String, List<ApiInstanceSelectResult>> instanceMap = new HashMap<>();
 
-        for (ApiInstanceSelectResult apiInstanceSelectResult : apiInstanceSelectResults) {
-            if (instanceMap.containsKey(apiInstanceSelectResult.getKeyName())) {
-                instanceMap.get(apiInstanceSelectResult.getKeyName()).add(apiInstanceSelectResult);
+        for (ApiInstanceSelectResult api : apiInstances) {
+            if (instanceMap.containsKey(api.getKeyName())) {
+                instanceMap.get(api.getKeyName()).add(api);
                 continue;
             }
-            List<ApiInstanceSelectResult> apiInstances1SelectResult = new ArrayList<>();
-            apiInstances1SelectResult.add(apiInstanceSelectResult);
-            instanceMap.put(apiInstanceSelectResult.getKeyName(), apiInstances1SelectResult);
+            List<ApiInstanceSelectResult> apiInstances2 = new ArrayList<>();
+            apiInstances2.add(api);
+            instanceMap.put(api.getKeyName(), apiInstances2);
         }
         return toInstanceResult(instanceMap);
     }
 
     private Map<String, List<ApiInstanceResult>> toInstanceResult(Map<String, List<ApiInstanceSelectResult>> apiInstancesMap) {
         Map<String, List<ApiInstanceResult>> apiInstanceResults = new HashMap<>();
-
         for (String key : apiInstancesMap.keySet()) {
             InstanceHelper.sortByPriority(apiInstancesMap.get(key));//排完序后进行组装
             List<ApiInstanceSelectResult> instanceList = apiInstancesMap.get(key);
@@ -121,13 +120,4 @@ public class ApiInstanceServiceImpl implements ApiInstanceService {
         }
         return apiInstanceResults;
     }
-
-//    private Boolean haveAppMeta(List<ApiInstanceModel> apiInstanceModels) {
-//        List<String> appNames = apiInstanceModels.stream()
-//                .map(apiInstanceModel -> apiInstanceModel.getAppName())
-//                .collect(Collectors.toList());
-//        List<AppMetaEntity> appMetaEntities = appMetaDao.selectAppMeta(appNames);
-//        List<Long> appIds = appMetaEntities.stream().map(appMetaEntity -> appMetaEntity.getId()).collect(Collectors.toList());
-//        return appMetaDao.selectAppMeta(appNames).size() == appNames.size() ? true : false;
-//    }
 }
