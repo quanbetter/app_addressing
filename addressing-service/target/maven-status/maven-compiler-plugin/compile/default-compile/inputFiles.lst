@@ -1,4 +1,12 @@
-/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/APIInstanceService.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/AppMetaService.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/util/Transform.java
 /Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/model/AppInstanceModel.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/model/ApiInstanceModel.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/impl/AppMetaServiceImpl.java
 /Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/AppInstanceService.java
-/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/impl/APIInstanceServiceImpl.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/impl/ApiInstanceServiceImpl.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/util/InstanceHelper.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/model/ApiInstanceResult.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/model/AppMetaModel.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-service/src/main/java/com/quan/addressing/service/ApiInstanceService.java

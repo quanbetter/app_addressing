@@ -48,7 +48,12 @@
         <dependency>
             <groupId>cn.lalaframework</groupId>
             <artifactId>lala-easyopen</artifactId>
-            <version>1.1.8.RELEASE</version>
+            <version>1.1.7.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.7.RELEASE</version>
         </dependency>
     </dependencies>
 

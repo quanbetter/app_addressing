@@ -20,22 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d8a27bb-74c4-42c9-ae7f-3fe4d0522639" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/addressing-domain/target/classes/META-INF/addressing-domain.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/ApiInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/ApiInstanceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-service/target/classes/com/quan/addressing/service/impl/ApiInstanceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/target/classes/com/quan/addressing/service/impl/ApiInstanceServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/ApiInstanceDeleteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/ApiInstanceDeleteRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/ApiInstanceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/ApiInstanceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/AppInstanceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/AppInstanceRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/AppMetaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/dto/AppMetaRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/META-INF/addressing-web.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/ApiInstanceDeleteRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/ApiInstanceDeleteRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/ApiInstanceRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/ApiInstanceRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/AppInstanceRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/AppInstanceRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/AppMetaRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/dto/AppMetaRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/ApiInstanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/ApiInstanceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppMetaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppMetaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-domain/src/main/java/com/quan/addressing/dao/AppInstanceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-domain/src/main/java/com/quan/addressing/dao/AppInstanceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-domain/src/main/resources/mybatis/mapper/AppInstance.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-domain/src/main/resources/mybatis/mapper/AppInstance.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-domain/target/addressing-domain-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-domain/target/addressing-domain-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-domain/target/classes/com/quan/addressing/dao/AppInstanceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-domain/target/classes/com/quan/addressing/dao/AppInstanceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/AppInstanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/AppInstanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-service/target/addressing-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/target/addressing-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-service/target/classes/com/quan/addressing/service/impl/AppInstanceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/target/classes/com/quan/addressing/service/impl/AppInstanceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppInstanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppInstanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/classes/com/quan/addressing/web/controller/AppInstanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressing-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/addressing-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,9 +86,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressingservice" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3224138" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -182,7 +186,8 @@
       <workItem from="1606821366173" duration="68939000" />
       <workItem from="1607303822868" duration="1022000" />
       <workItem from="1608105664100" duration="4662000" />
-      <workItem from="1608110437300" duration="18035000" />
+      <workItem from="1608110437300" duration="19755000" />
+      <workItem from="1608276877862" duration="28110000" />
     </task>
     <servers />
   </component>
@@ -202,9 +207,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="208" y="31" key="#Project_Structure" timestamp="1606705056062">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="-93" y="-1043" key="#Project_Structure" timestamp="1608535681951">
+      <screen x="-370" y="-1080" width="1920" height="1080" />
     </state>
+    <state x="-93" y="-1043" key="#Project_Structure/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535681951" />
     <state x="208" y="31" key="#Project_Structure/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1606705056062" />
     <state x="83" y="286" key="#SQL_Dialects" timestamp="1606734910301">
       <screen x="0" y="0" width="1440" height="900" />
@@ -215,11 +221,11 @@
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608107098815" />
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1606875746883" />
-    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1608175696096">
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1608617740887">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1607064002461" />
-    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1608175696096" />
+    <state x="533" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1608617740887" />
     <state x="186" y="381" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606963958033">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -233,79 +239,109 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1608184833199" />
-    <state x="576" y="329" width="695" height="571" key="#xdebugger.evaluate" timestamp="1608174659731">
+    <state x="544" y="329" width="816" height="669" key="#xdebugger.evaluate" timestamp="1608618464675">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="613" y="-736" width="816" height="669" key="#xdebugger.evaluate/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537010411" />
     <state x="576" y="329" key="#xdebugger.evaluate/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112205053" />
-    <state x="576" y="329" width="695" height="571" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1608174659731" />
-    <state width="498" height="466" key="DebuggerActiveHint" timestamp="1607051360871">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="544" y="329" width="695" height="571" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1608618464675" />
+    <state width="664" height="560" key="DebuggerActiveHint" timestamp="1608537044040">
+      <screen x="-370" y="-1080" width="1920" height="1080" />
     </state>
+    <state width="664" height="560" key="DebuggerActiveHint/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537044040" />
     <state width="498" height="466" key="DebuggerActiveHint/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1607051360871" />
-    <state width="1398" height="365" key="GridCell.Tab.0.bottom" timestamp="1608259384822">
+    <state x="-270" y="-980" width="1720" height="880" key="DiffContextDialog" timestamp="1608284644044">
+      <screen x="-370" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="-270" y="-980" width="1720" height="880" key="DiffContextDialog/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608284644044" />
+    <state width="1398" height="414" key="GridCell.Tab.0.bottom" timestamp="1608618350970">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.0.bottom/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924551" />
     <state width="1398" height="439" key="GridCell.Tab.0.bottom/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214456" />
-    <state width="1398" height="365" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608259384822" />
+    <state width="1398" height="414" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608618350970" />
     <state width="1398" height="338" key="GridCell.Tab.0.bottom/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616557" />
+    <state width="1878" height="407" key="GridCell.Tab.0.bottom/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118764" />
     <state width="1398" height="209" key="GridCell.Tab.0.bottom/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808887" />
-    <state width="1398" height="156" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608257027701" />
-    <state width="1398" height="365" key="GridCell.Tab.0.center" timestamp="1608259384821">
+    <state width="1398" height="311" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608618262381" />
+    <state width="1878" height="407" key="GridCell.Tab.0.bottom/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416470" />
+    <state width="1398" height="414" key="GridCell.Tab.0.center" timestamp="1608618350968">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.0.center/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924549" />
     <state width="1398" height="439" key="GridCell.Tab.0.center/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214454" />
-    <state width="1398" height="365" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608259384821" />
+    <state width="1398" height="414" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608618350968" />
     <state width="1398" height="338" key="GridCell.Tab.0.center/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616556" />
+    <state width="1878" height="407" key="GridCell.Tab.0.center/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118757" />
     <state width="1398" height="209" key="GridCell.Tab.0.center/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808885" />
-    <state width="1398" height="156" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1608257027700" />
-    <state width="1398" height="365" key="GridCell.Tab.0.left" timestamp="1608259384820">
+    <state width="1398" height="311" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1608618262379" />
+    <state width="1878" height="407" key="GridCell.Tab.0.center/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416469" />
+    <state width="1398" height="414" key="GridCell.Tab.0.left" timestamp="1608618350968">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.0.left/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924544" />
     <state width="1398" height="439" key="GridCell.Tab.0.left/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214453" />
-    <state width="1398" height="365" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608259384820" />
+    <state width="1398" height="414" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608618350968" />
     <state width="1398" height="338" key="GridCell.Tab.0.left/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616554" />
+    <state width="1878" height="407" key="GridCell.Tab.0.left/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118753" />
     <state width="1398" height="209" key="GridCell.Tab.0.left/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808883" />
-    <state width="1398" height="156" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1608257027699" />
-    <state width="1398" height="365" key="GridCell.Tab.0.right" timestamp="1608259384822">
+    <state width="1398" height="311" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1608618262377" />
+    <state width="1878" height="407" key="GridCell.Tab.0.left/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416468" />
+    <state width="1398" height="414" key="GridCell.Tab.0.right" timestamp="1608618350969">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.0.right/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924550" />
     <state width="1398" height="439" key="GridCell.Tab.0.right/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214455" />
-    <state width="1398" height="365" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608259384822" />
+    <state width="1398" height="414" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608618350969" />
     <state width="1398" height="338" key="GridCell.Tab.0.right/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616556" />
+    <state width="1878" height="407" key="GridCell.Tab.0.right/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118758" />
     <state width="1398" height="209" key="GridCell.Tab.0.right/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808886" />
-    <state width="1398" height="156" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1608257027701" />
-    <state width="1398" height="365" key="GridCell.Tab.1.bottom" timestamp="1608259384825">
+    <state width="1398" height="311" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1608618262380" />
+    <state width="1878" height="407" key="GridCell.Tab.0.right/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416469" />
+    <state width="1398" height="414" key="GridCell.Tab.1.bottom" timestamp="1608618350973">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.1.bottom/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924555" />
     <state width="1398" height="439" key="GridCell.Tab.1.bottom/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214460" />
-    <state width="1398" height="365" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608259384825" />
+    <state width="1398" height="414" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608618350973" />
     <state width="1398" height="338" key="GridCell.Tab.1.bottom/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616564" />
+    <state width="1878" height="407" key="GridCell.Tab.1.bottom/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118771" />
     <state width="1398" height="209" key="GridCell.Tab.1.bottom/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808891" />
-    <state width="1398" height="156" key="GridCell.Tab.1.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608257027704" />
-    <state width="1398" height="365" key="GridCell.Tab.1.center" timestamp="1608259384824">
+    <state width="1398" height="311" key="GridCell.Tab.1.bottom/0.23.1440.831@0.23.1440.831" timestamp="1608618262385" />
+    <state width="1878" height="407" key="GridCell.Tab.1.bottom/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416473" />
+    <state width="1398" height="414" key="GridCell.Tab.1.center" timestamp="1608618350972">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.1.center/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924553" />
     <state width="1398" height="439" key="GridCell.Tab.1.center/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214458" />
-    <state width="1398" height="365" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1608259384824" />
+    <state width="1398" height="414" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1608618350972" />
     <state width="1398" height="338" key="GridCell.Tab.1.center/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616562" />
+    <state width="1878" height="407" key="GridCell.Tab.1.center/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118767" />
     <state width="1398" height="209" key="GridCell.Tab.1.center/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808889" />
-    <state width="1398" height="156" key="GridCell.Tab.1.center/0.23.1440.831@0.23.1440.831" timestamp="1608257027702" />
-    <state width="1398" height="365" key="GridCell.Tab.1.left" timestamp="1608259384823">
+    <state width="1398" height="311" key="GridCell.Tab.1.center/0.23.1440.831@0.23.1440.831" timestamp="1608618262382" />
+    <state width="1878" height="407" key="GridCell.Tab.1.center/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416472" />
+    <state width="1398" height="414" key="GridCell.Tab.1.left" timestamp="1608618350971">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.1.left/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924552" />
     <state width="1398" height="439" key="GridCell.Tab.1.left/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214457" />
-    <state width="1398" height="365" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1608259384823" />
+    <state width="1398" height="414" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1608618350971" />
     <state width="1398" height="338" key="GridCell.Tab.1.left/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616561" />
+    <state width="1878" height="407" key="GridCell.Tab.1.left/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118766" />
     <state width="1398" height="209" key="GridCell.Tab.1.left/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808888" />
-    <state width="1398" height="156" key="GridCell.Tab.1.left/0.23.1440.831@0.23.1440.831" timestamp="1608257027702" />
-    <state width="1398" height="365" key="GridCell.Tab.1.right" timestamp="1608259384824">
+    <state width="1398" height="311" key="GridCell.Tab.1.left/0.23.1440.831@0.23.1440.831" timestamp="1608618262381" />
+    <state width="1878" height="407" key="GridCell.Tab.1.left/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416471" />
+    <state width="1398" height="414" key="GridCell.Tab.1.right" timestamp="1608618350972">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1878" height="407" key="GridCell.Tab.1.right/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608537924554" />
     <state width="1398" height="439" key="GridCell.Tab.1.right/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608112214459" />
-    <state width="1398" height="365" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1608259384824" />
+    <state width="1398" height="414" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1608618350972" />
     <state width="1398" height="338" key="GridCell.Tab.1.right/0.23.1440.831/-370.-1057.1920.1057@0.23.1440.831" timestamp="1607074616563" />
+    <state width="1878" height="407" key="GridCell.Tab.1.right/0.23.1440.831/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608535118769" />
     <state width="1398" height="209" key="GridCell.Tab.1.right/0.23.1440.831/-370.-1080.1920.1080@0.23.1440.831" timestamp="1608109808890" />
-    <state width="1398" height="156" key="GridCell.Tab.1.right/0.23.1440.831@0.23.1440.831" timestamp="1608257027703" />
+    <state width="1398" height="311" key="GridCell.Tab.1.right/0.23.1440.831@0.23.1440.831" timestamp="1608618262383" />
+    <state width="1878" height="407" key="GridCell.Tab.1.right/0.23.1440.877/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608531416473" />
     <state x="258" y="112" key="Maven.ArtifactSearchDialog" timestamp="1608171215027">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -316,121 +352,621 @@
     </state>
     <state x="405" y="159" key="RollbackChangesDialog/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608107062527" />
     <state x="405" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1606891173619" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1606963983456">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="-75" y="-973" key="SettingsEditor" timestamp="1608521882441">
+      <screen x="-370" y="-1080" width="1920" height="1080" />
     </state>
+    <state x="-75" y="-973" key="SettingsEditor/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608521882441" />
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1606720585143" />
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1606963983456" />
     <state width="500" height="467" key="SwitcherDM" timestamp="1607074476416">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="467" key="SwitcherDM/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1607074476416" />
-    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1606888507347">
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1608515449472">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1606888507347" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1608515449472" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606892446252">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1606892446252" />
-    <state x="420" y="207" width="600" height="486" key="find.popup" timestamp="1608169426451">
+    <state x="243" y="186" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1608618192670">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="243" y="186" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1608618192670" />
+    <state x="190" y="-832" width="860" height="584" key="find.popup" timestamp="1608520642476">
+      <screen x="-370" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="190" y="-832" width="860" height="584" key="find.popup/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608520642476" />
     <state x="420" y="207" width="600" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1608169426451" />
     <state x="172" y="156" key="new project wizard" timestamp="1606974162082">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="172" y="156" key="new project wizard/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1606974162082" />
     <state x="172" y="156" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1606963511922" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1608183135736">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1608617333792">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1608183135736" />
+    <state x="143" y="-845" width="894" height="812" key="search.everywhere.popup/0.0.1440.900/-370.-1080.1920.1080@-370.-1080.1920.1080" timestamp="1608532872983" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1608617333792" />
+    <state x="143" y="-827" width="894" height="794" key="search.everywhere.popup/0.23.1440.831/-370.-1057.1920.1057@-370.-1057.1920.1057" timestamp="1608279183751" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1608176137656" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app-service/src/main/java/com/quan/appservice/config/InterfaceInstanceAutoConfig.java</url>
           <line>39</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app-service/src/main/java/com/quan/appservice/config/InterfaceInstanceAutoConfig.java</url>
           <line>47</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java</url>
-          <line>38</line>
+          <line>43</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/ApiInstanceServiceImpl.java</url>
           <line>35</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java</url>
           <line>49</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppMetaServiceImpl.java</url>
           <line>47</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppMetaServiceImpl.java</url>
           <line>37</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppMetaServiceImpl.java</url>
           <line>30</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppMetaServiceImpl.java</url>
           <line>34</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/ApiInstanceServiceImpl.java</url>
           <line>43</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java</url>
           <line>26</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java</url>
           <line>27</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java</url>
           <line>45</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/ApiInstanceController.java</url>
           <line>52</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppMetaController.java</url>
           <line>34</line>
           <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/register/ApiRegister.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>236</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>254</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/template/InvokeTemplate.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/controller/AppInstanceController.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/register/AbstractInitializer.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser2.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser2.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/util/RequestUtil.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/util/RequestUtil.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/util/RequestUtil.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser2.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser2.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser2.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.73/fastjson-1.2.73-sources.jar!/com/alibaba/fastjson/JSON.java</url>
+          <line>252</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser2.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiConfig.java</url>
+          <line>819</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser2.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/util/RemoteIpUtil.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>261</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>279</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>435</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>434</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>325</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>343</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>422</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/bean/Callers.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>347</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>331</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>350</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/bean/Callers.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/bean/Callers.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/LimitInterceptor.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/LimitInterceptor.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitLocalManager.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitManager.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/LimitInterceptor.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/template/InvokeTemplate.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/addressing-web/src/main/java/com/quan/addressing/web/IndexController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/register/ApiRegister.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/register/ApiRegister.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/register/ApiRegister.java</url>
+          <line>270</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/register/ApiRegister.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/config/ConfigClient.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiConfig.java</url>
+          <line>583</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitManager.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitConfigRedisManager.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiParamParser.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiContext.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/RpcDataDecoder.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiDataDecoder.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitManager.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/LimitConfig.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitManager.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/LimitInterceptor.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitManager.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitConfigRedisManager.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitManager.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/register/ApiRegister.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/config/processor/UpdateLimitConfigProcessor.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/config/processor/DownloadLimitConfigProcessor.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/template/LimitTemplate.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/template/LimitTemplate.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitConfigRedisManager.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/support/ApiController.java</url>
+          <line>444</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.1/spring-web-5.3.1-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.8.RELEASE/lala-easyopen-1.1.8.RELEASE-sources.jar!/cn/lalaframework/easyopen/ApiInvoker.java</url>
+          <line>335</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/LimitConfig.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/template/LimitTemplate.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/LimitConfig.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/ApiLimitManager.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/lalaframework/lala-easyopen/1.1.7.RELEASE/lala-easyopen-1.1.7.RELEASE-sources.jar!/cn/lalaframework/easyopen/limit/AbstractLimitConfigManager.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressing-service/src/main/java/com/quan/addressing/service/impl/AppInstanceServiceImpl.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo typeName="sun.reflect.annotation.AnnotationInvocationHandler" fieldName="type" />
         <PinnedItemInfo typeName="com.quan.appservice.config.GetInterfaceInstanceAutoConfig" fieldName="appIds" />
+        <PinnedItemInfo typeName="cn.lalaframework.easyopen.limit.ApiLimitManager" fieldName="limitConfigManager" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

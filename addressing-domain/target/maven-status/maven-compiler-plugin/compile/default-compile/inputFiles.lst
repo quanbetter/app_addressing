@@ -1,7 +1,7 @@
 /Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/dao/AppInstanceDao.java
-/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/dao/APIInstanceDao.java
-/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/entity/APIInstanceResult.java
-/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/entity/APIInstance.java
-/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/common/InstanceHelper.java
-/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/common/Constant.java
-/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/entity/AppIdMeta.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/entity/AppMetaEntity.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/entity/ApiInstanceSelectResult.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/entity/AppInstanceEntity.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/entity/ApiInstanceEntiry.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/dao/AppMetaDao.java
+/Users/quan/Desktop/10-01/app-addressing/addressing-domain/src/main/java/com/quan/addressing/dao/ApiInstanceDao.java

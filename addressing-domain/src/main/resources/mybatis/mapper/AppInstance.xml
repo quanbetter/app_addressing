@@ -6,6 +6,19 @@
 
     <insert id="insertAppInstance" parameterType="com.quan.addressing.entity.AppInstanceEntity">
         insert into app_instance (app_id, address, port)
-        values (#{appId},#{address},#{port})
+        values (#{appId}, #{address}, #{port})
     </insert>
+
+    <select id="selectAppInstance" resultType="com.quan.addressing.entity.AppInstanceEntity">
+        select app_id, address, port
+        from app_instance
+        where app_id = #{appId};
+    </select>
+
+    <delete id="deleteAppInstance">
+        delete
+        from app_instance
+        where app_id = #{appId};
+    </delete>
+
 </mapper>
