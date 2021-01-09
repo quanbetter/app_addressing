@@ -16,7 +16,13 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:1.0.1.Release" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d8a27bb-74c4-42c9-ae7f-3fe4d0522639" name="Default Changelist" comment="">
@@ -42,6 +48,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -178,6 +185,7 @@
       <workItem from="1608276877862" duration="30719000" />
       <workItem from="1608867743738" duration="2077000" />
       <workItem from="1609816452162" duration="13000" />
+      <workItem from="1610157073301" duration="1092000" />
     </task>
     <servers />
   </component>
@@ -349,11 +357,11 @@
     </state>
     <state x="258" y="112" key="Maven.ArtifactSearchDialog/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608107242794" />
     <state x="258" y="112" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1608171215027" />
-    <state x="405" y="159" key="RollbackChangesDialog" timestamp="1608107062527">
+    <state x="405" y="159" key="RollbackChangesDialog" timestamp="1610157201297">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="405" y="159" key="RollbackChangesDialog/0.0.1440.900/-370.-1080.1920.1080@0.0.1440.900" timestamp="1608107062527" />
-    <state x="405" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1606891173619" />
+    <state x="405" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1610157201297" />
     <state x="-75" y="-973" key="SettingsEditor" timestamp="1608521882441">
       <screen x="-370" y="-1080" width="1920" height="1080" />
     </state>
@@ -372,6 +380,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1606892446252" />
+    <state x="508" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610158180443">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="508" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1610158180443" />
     <state x="243" y="186" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1608618192670">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
