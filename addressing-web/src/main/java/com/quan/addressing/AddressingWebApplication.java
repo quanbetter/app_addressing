@@ -10,7 +10,7 @@ public class AddressingWebApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AddressingWebApplication.class, args);
-        System.out.println("quan");
+        System.out.println("quanquan");
     }
 
 }
